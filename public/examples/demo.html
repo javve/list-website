@@ -1,0 +1,615 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>List.js - Paging Plugin</title>
+    <meta name="description" content="List.js is super flexible and here are two examples of how to use it.">
+    <meta name="author" content="Jonny Strömberg">
+    <meta name="google-site-verification" content="CxtqsFWhMxG32DK5A7Hbtg1ficvqhu9sybSeDP25JpI" />
+
+    <!--
+
+    Nothing to see here that has to do with List.js, look at the bottom of the page!
+
+    -->
+    <link rel="shortcut icon" href="../images/graphics/favicon.ico">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26278829-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</head>
+
+<body>
+
+
+    <div id="container" class="example-page">
+                    <div id="support-articles">
+                <div class="search_box">
+                    <input class="search" autofocus placeholder="Find your answer here" />
+                </div>
+                <h3>Sort by:</h3>
+                <ul class="sort-by">
+                    <li class="sort-btn" id="filter-video">How to Videos</li>
+                    <li class="sort-btn" id="filter-article">Help Articles</li>
+                </ul>
+                <ul class="filter">
+                    <li class="btn" id="filter-none">Show all</li>
+                    <li class="btn" id="filter-install">Common Solutions</li>
+                    <li class="btn" id="filter-revu">Revu</li>
+                    <li class="btn" id="filter-plugins">Plugins</li>
+                    <li class="btn" id="filter-printer">PDF Printer</li>
+                    <li class="btn" id="filter-admin">Administrator</li>
+                    <li class="btn" id="filter-3rd-party">3rd Party</li>
+                </ul>
+                <div class="search_results">
+                    <h3>Results</h3>
+                    <ul class="list">
+                        <!--    =========Common Solutions=========  -->
+                        <li>
+                            <p class="description"><a href="install/ge-network-deploy.asp">Network/automated deployment of Bluebeam software</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="revu/rv-unable-to-calibrate.asp">Unable to Calibrate a Document</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="revu/rv-move-license.asp">Move a Bluebeam license to a new comptuer</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="revu/rv-snap-to-grid.asp">The mouse cursor does not land on the selected point</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="admin/ad-default-pdf-viewer.asp">Make Revu the default PDF viewer</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="install/in-dotnet.asp">Bluebeam installation prerequisites; Microsoft .NET Framework and Windows Installer</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="admin/ad-load-toolbar.asp">The Bluebeam toolbar does not display in my application</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="autocad/ac-custom-pagesize.asp">Create custom page sizes for AutoCAD</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="revu/rv-restart-service.asp">'Save As' window does not display, restart the printer port monitor</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="revu/rv-printing-errors.asp">Printing errors: adjust print preferences</a><span class="name">Article</span></p>
+                            <span class="category">Common Solutions</span>
+                        </li>
+
+
+                        <!--    =========Revu=========  -->
+                        <li>
+                             <p class="description"><a href="install/ge-network-deploy.asp">Network/automated deployment of Bluebeam software</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-bluebeam-and-mac.asp">Bluebeam PDF Revu and compatibility with Mac OS</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="install/in-dotnet.asp">Bluebeam installation prerequisites; Microsoft .NET Framework and Windows Installer</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="install/in-error-1605.asp">Windows Install Error 1605 - This action is only valid for products that are currently installed</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="install/in-error-1628.asp">Windows install error 1628</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="install/in-repair-bluebeam-installation.asp">Repair the Bluebeam installation</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="install/in-repair-microsoft-framework.asp">Repair the Microsoft .NET Framework</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="install/in-ssce-install-error.asp">Microsoft SQL Server Compact (SSCE) installation fails</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="install/in-registration-errors.asp">Bluebeam registration errors</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-move-license.asp">Move a Bluebeam license to a new comptuer</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="install/in-pdf-printer-doesnt-install.asp">Bluebeam PDF printer does not install</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-finding-bbversion.asp">Find your version of installed Bluebeam software</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-snap-to-grid.asp">The mouse cursor does not land on the selected point</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="admin/ad-default-pdf-viewer.asp">Make Revu the default PDF viewer</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="install/in-encountered-error.asp">Bluebeam PDF Revu has encountered an error and needs to close</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-fontcache-repair.asp">The error message "Your font cache is corrupt, rebuilding now" displays when starting Bluebeam PDF Revu, but Revu never starts</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-3d-subtype-prc.asp">Unsupported 3D Subtype PRC, check for newer version of Bluebeam PDF Revu for updates</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-cant-scan-to-pdf.asp">Cannot scan to PDF - TWAIN driver support</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-configuring-paper-ratio.asp">Configure Bluebeam PDF Revu to be a true 1:1 ratio to paper</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-customizing-tablet-prefs.asp">Customize Tablet Preferences</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-linemerge-performance.asp">Performance issues with line merged PDF files</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-printing-errors.asp">Printing errors: adjust print preferences</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-reduce-pdfsize.asp">Reduce PDF file size</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-revu-scroll-wheel.asp">Configure the mouse scroll wheel</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-rotate-pages.asp">Rotating PDF files: rotate pages vs. rotate view / adding text to a rotated PDF</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-slow-performance.asp">After installing Bluebeam software, my computer seems to perform slowly</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-unable-to-calibrate.asp">Unable to Calibrate a Document</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-viewports.asp">Use viewports to set different scales in the same PDF drawing</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-configuring-paper-ratio.asp">Configure Bluebeam PDF Revu to be a true 1:1 ratio to paper</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-encountered-error.asp">Bluebeam PDF Revu has encountered an error and needs to close</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-error-importing-punch-profile.asp">Error importing punch profile</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-fontcache-repair.asp">The error message "Your font cache is corrupt, rebuilding now" displays when starting Bluebeam PDF Revu, but Revu never starts</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-hiding-menubar.asp">Hide and unhide the menu bar</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-installation-version7-xp.asp">Bluebeam PDF Revu version 7 software installation for Windows XP</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-measure-markups-not-created.asp">Measure markups are not created</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-ocr-module-failed.asp">OCR Module Failed</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-regstein.asp">General Exception: The type initializer for 'Bluebeam.Registration.RegStein' threw an exception</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-sharepoint-integration.asp">Bluebeam PDF Revu 8.0 server-side SharePoint integration</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-snapshot-tool.asp">The Snapshot Tool</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-studio-faq.asp">Learn about Bluebeam Studio</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-unable-to-calibrate.asp">Unable to Calibrate a Document</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-viewports.asp">Use viewports to set different scales in the same PDF drawing</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-restart-service.asp">'Save As' window does not display, restart the printer port monitor</a><span class="name">Article</span></p>
+                             <span class="category">Revu</span>
+                        </li>
+
+
+                        <!--    =========Plugins=========   -->
+                        <li>
+                             <p class="description"><a href="office/of-office-admin-enable-office-office-plugin.asp">Enable the Bluebeam plugin for Microsoft Office</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="office/of-office-business-contact.asp">Fatal execution engine error in Microsoft Business Contact Manager after installing version 4 of Bluebeam's software</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="office/of-onconnect-message.asp">Error message "9: OnConnect subscript out of range" displays when starting Office applications</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="office/ge-office-multiple-toolbars.asp">Multiple Bluebeam or blank toolbars display in Word</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-loading-toolbars.asp">Load the AutoCAD plugin</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-acad-defaults-to-letter.asp">The AutoCAD page setup defaults to a letter sized sheet after the after PDF file is created</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-batch-apply-custom-page-setup.asp">AutoCAD plug-in: Use a custom page setup in batch</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-batch-mde.asp">Bluebeam PDF Revu batch requires AutoCAD MDE mode</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-black-and-white.asp">Create a black and white PDF file from AutoCAD</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-blank-pdf.asp">Bluebeam creates a blank PDF file out of AutoCAD</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-clip-text.asp">The top or side of the PDF file is cut off in PDFs created from AutoCAD</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-clipped-fonts.asp">TrueType fonts are clipped at the edge of the sheet or viewport</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-custom-pagesize.asp">Create custom page sizes for AutoCAD</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-hdi-mediasize.asp">The media name selected could not be found on the HDI Postscript printer PC3 file</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-hyperlinks-from-dwg.asp">Hyperlinks created in AutoCAD do not transfer to the PDF file</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-loading-toolbars.asp">I upgraded to a new version of AutoCAD. How do I get the plug-in for this version of AutoCAD?</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-map2006-error.asp">Autodesk Map 3D 2006 fatal error</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-mech-menu.asp">Erratic menu behavior in Autodesk Mechanical Desktop</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-print-plot-errors.asp">Print errors when plotting DWF files in Design Review 2010 to the Bluebeam PDF printer</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-printer-does-not-display-in-autocad.asp">The Bluebeam PDF printer does not display in the AutoCAD or AutoCAD LT printers list</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-printing-scale.asp">Create to-scale PDF files from AutoCAD drawings</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-autocad-publish.asp">How to use the Bluebeam PDF printer with AutoCAD Publish</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-createpdf-14.asp">How to PDF files from AutoCAD R14 and LT 98 using the Bluebeam PDF printer</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="autocad/ac-rotate-14.asp">Create corretly rotated PDF files from AutoCAD Release 14</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="solidworks/sw-2006sp3-error.asp">An exception error occurs when trying to use Bluebeam after installing SolidWorks 2006 SP3</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="solidworks/sw-black-and-white.asp">Create a black and white PDF file from SolidWorks</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="solidworks/sw-insert-dwg.asp">SolidWorks insert-DXF/DWG workaround</a><span class="name">Article</span></p>
+                             <span class="category">Plugins</span>
+                        </li>
+
+                        <!--    =========PDF Printer=========   -->
+                        <li>
+                             <p class="description"><a href="printer/ge-pdfprinter-doesnt-work.asp">Printing to the Bluebeam PDF printer does not work</a><span class="name">Article</span></p>
+                             <span class="category">PDF Printer</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="printer/ge-truncated-filename.asp">File name is truncated when printing to Bluebeam PDF printer</a><span class="name">Article</span></p>
+                             <span class="category">PDF Printer</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="admin/ad-printer-admin-change-folder-options.asp">Change where the Bluebeam PDF printer creates the PDF file</a><span class="name">Article</span></p>
+                             <span class="category">PDF Printer</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="admin/ad-pdf-printer-doesnt-install.asp">Bluebeam PDF printer does not install</a><span class="name">Article</span></p>
+                             <span class="category">PDF Printer</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-no-save-dialog.asp">"Save As" dialog does not display: Enable "Prompt for File Name"</a><span class="name">Article</span></p>
+                             <span class="category">PDF Printer</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-restart-service.asp">"Save As" dialog does not display: Restart the Port Monitor</a><span class="name">Article</span></p>
+                             <span class="category">PDF Printer</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="printer/ge-custom-pagesize.asp">Create custom page sizes for the Bluebeam PDF printer</a><span class="name">Article</span></p>
+                             <span class="category">PDF Printer</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="printer/ge-removing-duplicate-page-sizes.asp">Remove duplicate page sizes</a><span class="name">Article</span></p>
+                             <span class="category">PDF Printer</span>
+                        </li>
+
+                        <!--    =========Administrator========= -->
+                        <li>
+                             <p class="description"><a href="admin/ad-default-pdf-viewer.asp">Change the default PDF viewer</a><span class="name">Article</span></p>
+                             <span class="category">Administrator</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="admin/ad-load-toolbar.asp">The Bluebeam toolbar does not display in my application</a><span class="name">Article</span></p>
+                             <span class="category">Administrator</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="admin/ad-manage-pages.asp">Manage pages error</a><span class="name">Article</span></p>
+                             <span class="category">Administrator</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="revu/rv-debugging-enable.asp">Enable debugging messages</a><span class="name">Article</span></p>
+                             <span class="category">Administrator</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="admin/ad-printer-admin-change-folder-options.asp">Change the default folder options</a><span class="name">Article</span></p>
+                             <span class="category">Administrator</span>
+                        </li>
+
+                        <!--    =========3rd Party========= -->
+                         <li>
+                             <p class="description"><a href="external/ex-acrobat-print-comments.asp">Print markups using Acrobat or Reader</a><span class="name">Article</span></p>
+                             <span class="category">Administrator</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="external/ex-gray-lines.asp">PDF lines and text display as gray instead of black when viewed in Adobe Acrobat Reader</a><span class="name">Article</span></p>
+                             <span class="category">Administrator</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="external/ex-microstation-printer.asp">Use the Bluebeam PDF printer with MicroStation</a><span class="name">Article</span></p>
+                             <span class="category">Administrator</span>
+                        </li>
+                        <li>
+                             <p class="description"><a href="external/ex-tekla-structures.asp">Create PDF files from Tekla Structures</a><span class="name">Article</span></p>
+                             <span class="category">Administrator</span>
+                        </li>
+
+                         <!--   =========Videos=========    -->
+                         <li>
+                            <p class="description"><a href="http://wpc.00ab.edgecastcdn.net/0000AB/videos/revu-10/how-to/registering-your-software.mp4" class="smoothbox" title="Registering">Registering your software</a> Time: 3:30</p>
+                            <span class="category">Common Solutions</span>
+                            <span class="name">Video</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="http://wpc.00ab.edgecastcdn.net/0000AB/videos/revu-10/how-to/changing-profiles.mp4">Changing Profiles</a> Time: 1:02</p>
+                            <span class="category">Common Solutions</span>
+                            <span class="name">Video</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="http://wpc.00ab.edgecastcdn.net/0000AB/videos/revu-10/how-to/finding-markups.mp4">Finding Markups</a> Time: 0:42</p>
+                            <span class="category">Common Solutions</span>
+                            <span class="name">Video</span>
+                        </li>
+                        <li>
+                            <p class="description"><a href="http://wpc.00ab.edgecastcdn.net/0000AB/videos/revu-10/how-to/creating-pdfs.mp4">Creating PDFs</a> Time: 0:36</p>
+                            <span class="category">Common Solutions</span>
+                            <span class="name">Video</span>
+                        </li>
+                    </ul>
+
+                </div>
+                        <ul class="paging"></ul>
+                </div>
+            </div>
+
+    </div> <!-- end of #container -->
+
+
+    <!-- Start of List.js stuff -->
+    <script src="/js/list.js"></script>
+    <script src="/js/plugins/paging/list.paging.js"></script>
+
+    <script type="text/javascript">
+
+
+        /*
+        * LOVELY THINGS
+        */
+        var options = {
+            valueNames: [ 'name', 'description', 'category' ],
+            page: 8,
+            plugins: [ [ 'paging' , {
+                    innerWindow: 1,
+                    left: 2,
+                    right: 3} ] ]
+        };
+
+        var featureList = new List('support-articles', options);
+
+        $('#filter-install').click(function() {
+            featureList.filter(function(item) {
+                if (item.values().category == "Common Solutions") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            return false;
+        });
+
+        $('#filter-revu').click(function() {
+            featureList.filter(function(item) {
+                if (item.values().category == "Revu") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            return false;
+        });
+
+        $('#filter-plugins').click(function() {
+            featureList.filter(function(item) {
+                if (item.values().category == "Plugins") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            return false;
+        });
+
+        $('#filter-printer').click(function() {
+            featureList.filter(function(item) {
+                if (item.values().category == "PDF Printer") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            return false;
+        });
+
+        $('#filter-admin').click(function() {
+            featureList.filter(function(item) {
+                if (item.values().category == "Administrator") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            return false;
+        });
+        $('#filter-3rd-party').click(function() {
+            featureList.filter(function(item) {
+                if (item.values().category == "3rd Party") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            return false;
+        });
+        $('#filter-video').click(function() {
+            featureList.filter(function(item) {
+                if (item.values().name == "Video") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            return false;
+        });
+        $('#filter-article').click(function() {
+            featureList.filter(function(item) {
+                if (item.values().name == "Article") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            return false;
+        });
+        $('#filter-none').click(function() {
+            featureList.filter();
+            return false;
+        });
+
+
+
+    </script>
+    <!-- End of List.js stuff -->
+</body>
+</html>
