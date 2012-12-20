@@ -2,6 +2,10 @@
   "name": "list-website",
   "description": "The List.js website",
   "version": "0.0.1",
+  "engines": {
+      "node": "0.8.x",
+      "npm":  "1.1.x"
+  },
   "dependencies": {
     "express": "3.x",
     "express-partials": "0.0.6",
