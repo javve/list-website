@@ -103,5 +103,6 @@ app.get('*', function(req, res){
     res.render('404', { url: req.url });
 });
 
-app.listen(3003);
-console.log('Listening on port 3003');
+var port = process.env.PORT || 3003;
+app.listen(port);
+console.log('Listening on port '+ port);
