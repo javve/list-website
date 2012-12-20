@@ -1,0 +1,14 @@
+{
+  "name": "list-website",
+  "description": "The List.js website",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.x",
+    "express-partials": "0.0.6",
+    "express-pjax": "0.0.1",
+    "ejs": "0.8.3",
+    "ejs-locals": "1.0.2",
+    "less-middleware": "0.1.8",
+    "jake": "0.5.5"
+  }
+}

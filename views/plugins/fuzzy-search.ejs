@@ -1,0 +1,63 @@
+<div class="example-page">
+    <div>
+        <h1>Fuzzy Search Plugin</h1>
+    </div>
+
+    <div id="main">
+
+        <p class="note"><b>Note</b>: These examples are build using jQuery, but that is not required.</p>
+        <p class="note">Read more about the plugin at <a href="http://jonnystromberg.com/listjs-fuzzy-search-plugin/">jonnystromberg.com/listjs-fuzzy-search-plugin »</a></p>
+
+        <div class="c1">
+            <h2>Lovely characters list</h2>
+            <div id="lovely-things-list">
+                <input class="search-fuzzy" placeholder="Search lovely characters" />
+                <ul class="sort-by">
+                    <li class="sort btn" data-sort="character">Sort by name</li>
+                    <li class="sort btn" data-sort="game">Sort by game</li>
+                </ul>
+                <ul class="paging topPaging clearfix"></ul>
+                <ul class="list">
+                </ul>
+                <ul class="paging bottomPaging clearfix"></ul>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- end of #container -->
+
+<script src="/js/plugins/fuzzy/list.fuzzySearch.js"></script>
+
+<script type="text/javascript">
+
+    /*
+    * LOVELY CHARACTERS
+    */
+
+    var options = {
+        item: "<li><h4 class='character'></h4><span class='game'></span></li>",
+        valueNames: [ 'character', 'game' ],
+        plugins: [
+            [ 'fuzzySearch' ]
+        ]
+    };
+
+    var items = [
+        { character: "Guybrush Threepwood", game: "The Secret of Monkey Island" },
+        { character: "Manny Calavera", game: "Grim Fandango" },
+        { character: "Bernard Bernoulli", game: "Maniac Mansion" },
+        { character: "LeChuck", game: "Monkey Island" },
+        { character: "Elaine Marley-Threepwood", game: "Monkey Island" },
+        { character: "Purple Tentacle", game: "Day of the Tentacle" },
+        { character: "Adrian Ripburger", game: "Full Throttle" },
+        { character: "Bobbin Threadbare", game: "Loom" },
+        { character: "Murray the Demonic Skull", game: "The Curse of Monkey Island" },
+        { character: "Zak McKracken", game: "Zak McKracken & the Alien Mindbenders" }
+    ];
+
+    var featureList = new List('lovely-things-list', options, items);
+
+    $('.search-fuzzy').keyup(function() {
+        featureList.fuzzySearch($(this).val());
+    });
+</script>
