@@ -38,11 +38,13 @@ app.configure(function(){
 * Locals
 */
 app.locals({
-    title: "Textcloud",
-    description: "",
-    ogTitle: "",
-    ogDescription: "",
-    ogImage: ""
+    title: "List.js - Add search, sort and flexibility to plain HTML lists or tables with cross-browser native JavaScript by @javve",
+    description: "You do want a 3 KB native JavaScript that makes your plain HTML lists and tables super flexible, searchable, sortable and filterable? Yes?",
+    ogImage: "http://listjs.com/images/graphics/listjs-logo-bg.png"
+});
+app.use(function(req, res, next){
+    res.locals.currentUrl = req.protocol + '://' + req.host + req.url;
+    next();
 });
 
 
