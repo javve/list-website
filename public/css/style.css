@@ -257,7 +257,7 @@ hr {
 .carbonad {
   background-image: none !important;
   background-color: #fff !important;
-  border: solid 1px #cdc9c6 !important;
+  border: solid 1px #e5e5e5 !important;
   border-radius: 6px !important;
 }
 .container {
@@ -943,7 +943,7 @@ input:focus {
 }
 .btn {
   font-size: 1.8rem;
-  padding: 0.6rem 3rem;
+  padding: 0.8rem 3rem;
   border-radius: 6px;
   border: solid 2px #28a8e0;
   display: inline-block;
@@ -1025,6 +1025,20 @@ td {
   padding: 20px 20px 0;
   margin-bottom: 50px;
   font-size: 14px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.7rem 0;
+  background-color: #28a8e0;
+  text-align: center;
+}
+.footer a {
+  color: #fff;
+}
+.footer a:hover {
+  color: #edf4f4;
 }
 /* * * * * * * * * * * * * * * * * * * * *
 * Start page
