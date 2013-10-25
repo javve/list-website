@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400px" height="401px" viewBox="0 0 400 401" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>131003-listjs-logo</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Logo3" sketch:type="MSLayerGroup" stroke="#5BBDD1" stroke-width="2">
+            <path d="M0,0 L0,400 L400,400 L400,0 L0,0 Z M121.399808,89.3936436 L280.060318,119.937765 L280.060323,311.202298 L121.0696,278.936172 L121.399808,89.3936436 Z M121.399808,89.3936436" id="Rectangle-2" sketch:type="MSShapeGroup"></path>
+            <path d="M0.817222148,1.87231696 C0.817222148,1.87231696 173.181504,43.8552266 259.80546,65.0211212 C280.315619,70.0326203 320.028503,80.0754776 320.028503,80.0754776 L320.028503,320.004456 L279.831055,312.196167" id="Path-26" sketch:type="MSShapeGroup"></path>
+            <path d="M399.635071,399.557146 L80.1132812,320.035156 L80.1132812,80.051165 L121.546875,88.40625" id="Path-27" sketch:type="MSShapeGroup"></path>
+            <path d="M119.999999,280 L80.7371165,319.470654" id="Line" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M281,119 L319.334816,80.7294191" id="Line" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

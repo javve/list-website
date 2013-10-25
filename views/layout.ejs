@@ -41,17 +41,17 @@
     </script>
 </head>
 
-<body class="clearfix">
+<body>
 
     <div class="menu">
-        <div class="menu-container">
+        <div class="container">
             <ul class="main">
-                <li class="name"><a href="/">List.js</a></li>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="/docs">Docs</a></li>
                 <li><a href="/examples">Examples</a></li>
                 <li><a href="/plugins/paging">Plugins</a></li>
-                <li><a href="https://github.com/javve/list">Docs & Github</a></li>
-                <li><a href="/changelog">Changelog & Blog</a></li>
-                <li><a href="https://raw.github.com/javve/list/master/list.min.js" onClick="javascript: _gaq.push(['_trackPageview', '/download/list.min.js.menu']);"><b>Download</b></a></li>
+                <li><a href="/changelog">Changelog</a></li>
+                <li><a href="https://raw.github.com/javve/list/master/list.min.js" onClick="javascript: _gaq.push(['_trackPageview', '/download/list.min.js.menu']);">Download</a></li>
             </ul>
             <% if (locals.examples) { %>
             <ul class="secondary">
@@ -69,8 +69,18 @@
         </div>
     </div>
 
-    <div id="container">
+    <div class="container">
         <%- body %>
     </div>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=488461091214550";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

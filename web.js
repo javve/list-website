@@ -78,6 +78,7 @@ app.get('/performance', function(req, res) {
         description: "List.js is pretty fast. Try it out yourself!"
     });
 });
+
 app.get('/plugins', function(req, res) {
     res.render('plugins/index', {
         plugins: true
@@ -95,6 +96,23 @@ app.get('/plugins/paging', function(req, res) {
         plugins: true
     });
 });
+
+app.get('/docs', function(req, res) {
+    res.render('docs/index', {
+        plugins: true
+    });
+});
+app.get('/docs/options', function(req, res) {
+    res.render('docs/options', {
+        plugins: true
+    });
+});
+app.get('/docs/methods', function(req, res) {
+    res.render('docs/methods', {
+        plugins: true
+    });
+});
+
 app.get('/changelog', function(req, res) {
     res.render('changelog');
 });
