@@ -5,48 +5,66 @@
 @import "partials/carbonads";
 @import "partials/grid";
 
-@blue: #5bbdd1;
+@blue: #28a8e0;
 @green: #6cd25e;
 @grey: #a39e9a;
-@lightGrey: #cdc9c6;
+@orange: #f59621;
+@lightGrey: #edf4f4;
+@black: #2e2e2e;
 
 /* * * * * * * * * * * * * * * * * * * * *
 * General
 * * * * * * * * * * * * * * * * * * * * */
+html {
+  font-size: 62.5%;
+}
 
 body {
-    background-color:#f6f3f1;
-    font:300 16px/1.4 'helvetica neue', helvetica, arial;
+    background-color:#fff;
+    font:400 1.6rem/1.4 'helvetica neue', helvetica, arial;
     color:@grey;
-    padding:120px 0;
+    padding:80px 0;
 }
 
 // .container {
 //     max-width:960px;
 //     margin: 0 auto;
 // }
-
+a {
+    color:@blue;
+    &:hover {
+        color:darken(@blue, 10%);
+    }
+}
 p {
-    font-size:1em;
+    font-size:1.6rem;
     line-height:1.3;
     strong, b {
         color:darken(@grey, 20%);
-        font-weight: 400;
+        font-weight: 500;
     }
 }
 h1 {
-    font-size: 3em;
-    color:@blue;
+    font-size: 7.2rem;
+    color:@orange;
+    font-weight:400;
 }
 h2 {
-    font-size:2em;
-    color:#bbb;
-    font-weight:300;
+    font-size:3rem;
+    color:@black;
+    font-weight:400;
 }
 h3 {
-    font-weight:300;
-    font-size:1em;
-    margin-bottom:1em;
+    font-weight:600;
+    font-size:2rem;
+    margin-bottom:1rem;
+    color:@black;
+}
+h4 {
+    font-weight:600;
+    font-size:1.6rem;
+    margin-bottom:1rem;
+    color:@black;
 }
 
 input {
@@ -69,20 +87,29 @@ input:focus {
     border-left:solid 1px #aaa;}
 
 .btn {
-    padding:0.6em 1.5em;
+    font-size: 1.8rem;
+    padding:0.6rem 3rem;
     border-radius: 6px;
-    border:solid 2px @lightGrey;
+    border:solid 2px @blue;
     display:inline-block;
-    color:@grey;
+    color:@blue;
     text-decoration: none;
 
     &.btn-primary {
-        border-color:@green;
-        color:@green;
+        border-color:@blue;
+        background-color: @blue;
+        color:#fff;
         font-weight: 500;
+        &:hover {
+            background-color: darken(@blue, 10%);
+            color:#eee;
+        }
     }
 }
 .btn:hover {
+    text-decoration: none;
+    color:darken(@blue, 10%);
+    border-color:darken(@blue, 10%);
 }
 
 
@@ -132,8 +159,8 @@ td {
     a {
         line-height:60px;
         display: inline-block;
-        padding-left:1em;
-        padding-right:1em;
+        padding-left:1rem;
+        padding-right:1rem;
         color:#a39e9a;
         text-decoration: none;
         &:hover,
@@ -157,35 +184,57 @@ td {
 * * * * * * * * * * * * * * * * * * * * */
 
 .intro {
-    margin-bottom:4em;
+    margin-bottom:4rem;
     .intro-logo {
+        text-align: center;
         img {
             max-width: 100%;
         }
     }
     .intro-text {
         h1 {
-            font-size: 4em;
-            font-weight: 100;
-            margin: 0 0 0.1em;
+            font-size: 7.2rem;
+            margin: 0 0 0.1rem;
         }
         h2 {
-            font-size: 1.5em;
+            font-size: 2.5rem;
             font-weight: 300;
-            margin: 0 0 1em;
+            margin: 0 0 2.5rem;
+            color:@grey;
         }
         .btn {
-            margin-right:1em;
+            margin-right:1rem;
         }
     }
 }
 
 .misc {
+    background-color:@lightGrey;
+    border-radius: 7px;
+    padding:3rem 0;
     h3 {
-        margin:0 0 0.5em;
+        margin:0 0 0.5rem;
     }
     .misc-share {
-        margin-bottom:0.5em;
+        margin-bottom:0.5rem;
+    }
+    .misc-carbon {
+        text-align: center;
+    }
+    .misc-author {
+        padding-right:15px;
+        img {
+            float:left;
+            margin-right:10px;
+        }
+        h4 {
+            margin-bottom:0.5rem;
+        }
+        p {
+            font-size:1.3rem;
+            color:lighten(@black, 30%);
+            margin-top:0rem;
+        }
     }
 }
 

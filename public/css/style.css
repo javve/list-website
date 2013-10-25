@@ -251,6 +251,9 @@ hr {
   clip: rect(0 0 0 0);
   border: 0;
 }
+#carbonads-container {
+  display: inline-block;
+}
 .carbonad {
   background-image: none !important;
   background-color: #fff !important;
@@ -873,34 +876,51 @@ hr {
 /* * * * * * * * * * * * * * * * * * * * *
 * General
 * * * * * * * * * * * * * * * * * * * * */
+html {
+  font-size: 62.5%;
+}
 body {
-  background-color: #f6f3f1;
-  font: 300 16px/1.4 'helvetica neue', helvetica, arial;
+  background-color: #fff;
+  font: 400 1.6rem/1.4 'helvetica neue', helvetica, arial;
   color: #a39e9a;
-  padding: 120px 0;
+  padding: 80px 0;
+}
+a {
+  color: #28a8e0;
+}
+a:hover {
+  color: #1b8aba;
 }
 p {
-  font-size: 1em;
+  font-size: 1.6rem;
   line-height: 1.3;
 }
 p strong,
 p b {
   color: #716b66;
-  font-weight: 400;
+  font-weight: 500;
 }
 h1 {
-  font-size: 3em;
-  color: #5bbdd1;
+  font-size: 7.2rem;
+  color: #f59621;
+  font-weight: 400;
 }
 h2 {
-  font-size: 2em;
-  color: #bbb;
-  font-weight: 300;
+  font-size: 3rem;
+  color: #2e2e2e;
+  font-weight: 400;
 }
 h3 {
-  font-weight: 300;
-  font-size: 1em;
-  margin-bottom: 1em;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2e2e2e;
+}
+h4 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #2e2e2e;
 }
 input {
   font: normal 12px/1.3 'helvetica neue', helvetica, arial;
@@ -922,17 +942,28 @@ input:focus {
   border-left: solid 1px #aaa;
 }
 .btn {
-  padding: 0.6em 1.5em;
+  font-size: 1.8rem;
+  padding: 0.6rem 3rem;
   border-radius: 6px;
-  border: solid 2px #cdc9c6;
+  border: solid 2px #28a8e0;
   display: inline-block;
-  color: #a39e9a;
+  color: #28a8e0;
   text-decoration: none;
 }
 .btn.btn-primary {
-  border-color: #6cd25e;
-  color: #6cd25e;
+  border-color: #28a8e0;
+  background-color: #28a8e0;
+  color: #fff;
   font-weight: 500;
+}
+.btn.btn-primary:hover {
+  background-color: #1b8aba;
+  color: #eee;
+}
+.btn:hover {
+  text-decoration: none;
+  color: #1b8aba;
+  border-color: #1b8aba;
 }
 table {
   border-collapse: collapse;
@@ -978,8 +1009,8 @@ td {
 .menu a {
   line-height: 60px;
   display: inline-block;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 1rem;
+  padding-right: 1rem;
   color: #a39e9a;
   text-decoration: none;
 }
@@ -999,29 +1030,55 @@ td {
 * Start page
 * * * * * * * * * * * * * * * * * * * * */
 .intro {
-  margin-bottom: 4em;
+  margin-bottom: 4rem;
+}
+.intro .intro-logo {
+  text-align: center;
 }
 .intro .intro-logo img {
   max-width: 100%;
 }
 .intro .intro-text h1 {
-  font-size: 4em;
-  font-weight: 100;
-  margin: 0 0 0.1em;
+  font-size: 7.2rem;
+  margin: 0 0 0.1rem;
 }
 .intro .intro-text h2 {
-  font-size: 1.5em;
+  font-size: 2.5rem;
   font-weight: 300;
-  margin: 0 0 1em;
+  margin: 0 0 2.5rem;
+  color: #a39e9a;
 }
 .intro .intro-text .btn {
-  margin-right: 1em;
+  margin-right: 1rem;
+}
+.misc {
+  background-color: #edf4f4;
+  border-radius: 7px;
+  padding: 3rem 0;
 }
 .misc h3 {
-  margin: 0 0 0.5em;
+  margin: 0 0 0.5rem;
 }
 .misc .misc-share {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
+}
+.misc .misc-carbon {
+  text-align: center;
+}
+.misc .misc-author {
+  padding-right: 15px;
+}
+.misc .misc-author img {
+  float: left;
+  margin-right: 10px;
+}
+.misc .misc-author h4 {
+  margin-bottom: 0.5rem;
+}
+.misc .misc-author p {
+  font-size: 1.3rem;
+  color: #7a7a7a;
+  margin-top: 0rem;
 }
 /* * * * * * * * * * * * * * * * * * * * *
 * Examples
