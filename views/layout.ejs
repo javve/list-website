@@ -43,50 +43,43 @@
 
 <body>
 
-    <% if (locals.examples) { %>
-    <div class="menu">
-        <div class="container">
-            <ul class="main">
-                <li><a class="active" href="/">Home</a></li>
-                <li><a href="/docs">Docs</a></li>
-                <li><a href="/examples">Examples</a></li>
-                <li><a href="/plugins/paging">Plugins</a></li>
-                <li><a href="/changelog">Changelog</a></li>
-                <li><a href="https://raw.github.com/javve/list/master/list.min.js" onClick="javascript: _gaq.push(['_trackPageview', '/download/list.min.js.menu']);">Download</a></li>
-            </ul>
-            <% if (locals.examples) { %>
-            <ul class="secondary">
-                <li><a href="/examples">Basic example</a></li>
-                <li><a href="/examples/add-edit-remove">Add, edit & remove</a></li>
-                <li><a href="/performance">Performance</a></li>
-            </ul>
-            <% } %>
-            <% if (locals.plugins) { %>
-            <ul class="secondary">
-                <li><a href="/plugins/paging">Paging</a></li>
-                <li><a href="/plugins/fuzzy-search">Fuzzy Search</a></li>
-            </ul>
-            <% } %>
-        </div>
-    </div>
-    <% } %>
-
+  <% if (locals.examples) { %>
+  <div class="menu">
     <div class="container">
-        <%- body %>
+      <ul class="main">
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/examples">Examples</a></li>
+        <li><a href="/plugins/paging">Plugins</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="https://raw.github.com/javve/list/master/list.min.js" onClick="javascript: _gaq.push(['_trackPageview', '/download/list.min.js.menu']);">Download</a></li>
+      </ul>
+      <% if (locals.plugins) { %>
+      <ul class="secondary">
+        <li><a href="/plugins/paging">Paging</a></li>
+        <li><a href="/plugins/fuzzy-search">Fuzzy Search</a></li>
+      </ul>
+      <% } %>
     </div>
+  </div>
+  <% } %>
 
-    <div class="footer">
-        <p><a href="#">Like List.js? Buy me a beer!</a></p>
-    </div>
+  <div class="container">
+    <%- body %>
+  </div>
 
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=488461091214550";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+  <div class="footer">
+    <p><a href="#">Like List.js? Buy me a beer!</a></p>
+  </div>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=488461091214550";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

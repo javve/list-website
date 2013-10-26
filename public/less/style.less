@@ -4,6 +4,7 @@
 @import "partials/scaffolding";
 @import "partials/carbonads";
 @import "partials/grid";
+@import "partials/navs";
 
 @blue: #28a8e0;
 @green: #6cd25e;
@@ -23,13 +24,9 @@ body {
     background-color:#fff;
     font:400 1.6rem/1.4 'helvetica neue', helvetica, arial;
     color:@grey;
-    padding:80px 0;
+    padding:80px 0 150px;
 }
 
-// .container {
-//     max-width:960px;
-//     margin: 0 auto;
-// }
 a {
     color:@blue;
     &:hover {
@@ -45,9 +42,10 @@ p {
     }
 }
 h1 {
-    font-size: 7.2rem;
+    font-size: 5rem;
     color:@orange;
     font-weight:400;
+    margin:0 0 3rem;
 }
 h2 {
     font-size:3rem;
@@ -66,25 +64,6 @@ h4 {
     margin-bottom:1rem;
     color:@black;
 }
-
-input {
-    font:normal 12px/1.3 'helvetica neue', helvetica, arial;
-    font-size:20px;
-    padding:2px 10px;
-    border-radius:10px;
-    border:solid 1px #555;
-    float:left;
-    margin-right:10px;
-    margin-bottom:15px;
-}
-input:focus {
-    border:none;
-    outline:none;
-    background-color:#eee;
-    border-top:solid 1px #aaa;
-    border-right:solid 1px #e6e6e6;
-    border-bottom:solid 1px #e6e6e6;
-    border-left:solid 1px #aaa;}
 
 .btn {
     font-size: 1.8rem;
@@ -136,47 +115,42 @@ td {
 * Meny
 * * * * * * * * * * * * * * * * * * * * */
 .menu {
-    background-color:#f6f3f1;
-    position: fixed;
-    left:0;
-    top:0;
-    margin:0;
-    margin-left:-20px;
-    width:100%;
-    padding:0 20px;
+    padding:0;
     z-index: 100;
-    border-bottom:solid 1px #d8d3d0;
-    text-align: center;
+    margin-top:-80px;
+    margin-bottom:4rem;
 
     ul {
         display:inline-block;
         margin:0;
+        padding:0;
     }
     li {
         display:inline-block;
-        margin:0;
+        margin:0 3rem 0 0;
     }
     a {
         line-height:60px;
         display: inline-block;
-        padding-left:1rem;
-        padding-right:1rem;
-        color:#a39e9a;
         text-decoration: none;
         &:hover,
         &.active {
-            color:#494949;
         }
         &.active {
             font-weight: 500;
+            color:@black;
         }
     }
 }
 
-.code {
-    padding:20px 20px 0;
-    margin-bottom:50px;
-    font-size:14px;
+.menu-sub {
+    margin:-1.5rem 0 3rem;
+    padding:0;
+    li {
+        list-style-type: none;
+        display: inline-block;
+        margin-right:2rem;
+    }
 }
 
 .footer {
@@ -257,21 +231,104 @@ td {
 /* * * * * * * * * * * * * * * * * * * * *
 * Examples
 * * * * * * * * * * * * * * * * * * * * */
-#container.example-page {
-    margin-top:30px;
+.nav-tabs {
+    .active a {
+        background-color: @lightGrey !important;
+    }
+}
+.tab-content {
+    background-color: @lightGrey;
+    border:solid 1px #ddd;
+    border-top:none;
 }
 
-.note {
-    margin-bottom:60px;
-    text-align:center;
-    color:#999;
-    font-size:14px;
-}
-.note b {
-    color:#eee;
-}
-.note a {
-    color:#eee;
+#users {
+    margin-bottom:5rem;
+    .clearfix();
+    .list {
+        padding-top:20px;
+        & > div {
+            display:inline-block;
+            background-color: @lightGrey;
+            padding:1rem 0;
+            width:200px;
+            text-align: center;
+            margin-right:1px;
+        }
+    }
+    .avatar {
+        max-width: 150px;
+        img {
+            max-width: 100%;
+        }
+    }
+    h3 {
+        font-size: 1.6rem;
+        margin:0 0 0.3rem;
+        font-weight: normal;
+    }
+    p {
+        margin:0;
+    }
+
+    input {
+        border:solid 1px #ccc;
+        border-radius: 5px;
+        padding:0.7rem 1.4rem;
+    }
+    input:focus {
+        outline:none;
+        border-color:#aaa;
+    }
+    .sort {
+        padding:0.8rem 3rem;
+        border-radius: 6px;
+        border:none;
+        display:inline-block;
+        color:#fff;
+        text-decoration: none;
+        background-color: @blue;
+    }
+    .sort:hover {
+        text-decoration: none;
+        background-color:darken(@blue, 10%);
+    }
+    .sort:focus {
+        outline:none;
+    }
+    .sort:after {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        content:"";
+        position: relative;
+        top:-10px;
+        right:-5px;
+    }
+    .sort.asc:after {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff;
+        content:"";
+        position: relative;
+        top:13px;
+        right:-5px;
+    }
+    .sort.desc:after {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #fff;
+        content:"";
+        position: relative;
+        top:-10px;
+        right:-5px;
+    }
 }
 
 /* * * * * * * * * * * * * * * * * * * * *
@@ -361,14 +418,14 @@ td {
 * * * * * * * * * * * * * * * * * * * * */
 
 pre {
-    padding:0 20px 10px;
-    margin:0 0 20px;
+    padding:3rem;
+    margin:0;
     line-height:1.5;
 }
 
 pre, code {
    font-family: 'monaco', sans-serif;
-   font-size: 12px;
+   font-size: 1.2rem;
 }
 
 pre .keyword { color: #FF0C4B; }

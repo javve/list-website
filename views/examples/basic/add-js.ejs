@@ -1,0 +1,18 @@
+var options = {
+  valueNames: [ 'feature', 'description' ]
+};
+
+var values = ∫[
+  { feature: 'Add', description:'Add items on the fly.' },
+  { feature: 'Get', description:'Get item based on value.' },
+  { feature: 'Update', description:'Update items as you go.' }
+];
+
+var featureList = new List('example-list', options, values);
+
+var newFeature = {
+  feature: 'Remove',
+  description:'Remove items whenever you feel like.'
+};
+
+featureList.add(newFeature);
