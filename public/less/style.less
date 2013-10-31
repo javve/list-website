@@ -5,6 +5,7 @@
 @import "partials/carbonads";
 @import "partials/grid";
 @import "partials/navs";
+@import "partials/tooltip";
 
 @blue: #28a8e0;
 @green: #6cd25e;
@@ -439,7 +440,7 @@ td {
 pre {
     padding:3rem;
     margin:0;
-    line-height:1.5;
+    line-height:1.7;
     color:#666;
 }
 
@@ -447,11 +448,13 @@ pre, code {
    font-family: 'monaco', sans-serif;
    font-size: 1.2rem;
 }
-
-pre .keyword { color: #FF0C4B; }
-pre .string { color: #01DBFF; }
-pre .regexp { color: #15E80B; }
-pre .class { color: #15E80B; }
-pre .special { color: #FFD901; }
-pre .number { color: #01DBFF; }
-pre .comment { color: grey; font-style: italic; }
+pre code .annotation {
+    background-color: @blue;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 11px;
+    cursor:help;
+    &:hover {
+        background-color:darken(@blue, 10%);
+    }
+}

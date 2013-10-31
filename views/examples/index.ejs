@@ -49,7 +49,7 @@
   <div class="tab-pane fade active" id="existing">
     <div class="row">
       <div class="col-sm-6">
-<pre><code>
+<pre><code id="hej">
 <%- include basic/existing-html.ejs %>
 </code></pre>
       </div>
@@ -115,5 +115,30 @@ $('#basic-tabs a').click(function (e) {
 </script>
 
 <script type="text/javascript" src="js/libs/highlight/highlight.pack.js"></script>
+<script src="/js/libs/bootstrap/transition.js"></script>
 <script src="/js/libs/bootstrap/tab.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/libs/bootstrap/tooltip.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  function annotate() {
+    var annotations = [
+      [ 'users', 'This is important' ],
+      [ 'search', 'This is important' ],
+      [ 'sort', 'This is important' ],
+      [ 'name', 'This is important' ],
+      [ 'list', 'This is important' ],
+      [ 'name', 'This is important' ]
+    ];
+    $('code').html(function(i, html) {
+        for (var i = 0; i < annotations.length; i++) {
+          html = html.replace(annotations[i][0], '<span class="annotation" title="'+annotations[i][1]+'">'+annotations[i][0]+'</span>');
+        }
+        return html; //return html.replace(/(BC-\d{3})/g, "<strong>$1</strong>");
+    });
+    $('.annotation').tooltip();
+
+  }
+  $(window).load(function() {
+    setTimeout(annotate, 1000);
+  })
+</script>

@@ -1090,6 +1090,104 @@ hr {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+.tooltip {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  visibility: visible;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.tooltip.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 4px;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
 /* * * * * * * * * * * * * * * * * * * * *
 * General
 * * * * * * * * * * * * * * * * * * * * */
@@ -1494,7 +1592,7 @@ td {
 pre {
   padding: 3rem;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.7;
   color: #666;
 }
 pre,
@@ -1502,25 +1600,13 @@ code {
   font-family: 'monaco', sans-serif;
   font-size: 1.2rem;
 }
-pre .keyword {
-  color: #FF0C4B;
+pre code .annotation {
+  background-color: #28a8e0;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 11px;
+  cursor: help;
 }
-pre .string {
-  color: #01DBFF;
-}
-pre .regexp {
-  color: #15E80B;
-}
-pre .class {
-  color: #15E80B;
-}
-pre .special {
-  color: #FFD901;
-}
-pre .number {
-  color: #01DBFF;
-}
-pre .comment {
-  color: grey;
-  font-style: italic;
+pre code .annotation:hover {
+  background-color: #1b8aba;
 }
