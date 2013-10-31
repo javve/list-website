@@ -198,9 +198,6 @@ td {
 }
 
 .misc {
-    background-color:@lightGrey;
-    border-radius: 7px;
-    padding:3rem 0;
     h3 {
         margin:0 0 0.5rem;
     }
@@ -211,13 +208,16 @@ td {
         text-align: center;
     }
     .misc-author {
-        padding-right:15px;
+        background-color:@lightGrey;
+        border-radius: 7px;
+        padding:3rem;
         img {
             float:left;
-            margin-right:10px;
+            margin-right:2rem;
         }
         h4 {
             margin-bottom:0.5rem;
+            margin-top: 0;
         }
         p {
             font-size:1.3rem;
@@ -237,9 +237,28 @@ td {
     }
 }
 .tab-content {
-    background-color: @lightGrey;
-    border:solid 1px #ddd;
     border-top:none;
+    .col-sm-6:first-child {
+        box-shadow: inset -1px 0 #eee;
+    }
+    .col-sm-6:first-child:after {
+        content:"HTML";
+        position: absolute;
+        right:10px;
+        top:0;
+        background-color:#f5f5f5;
+        padding:3px 6px;
+        font-size: 11px;
+    }
+    .col-sm-6:last-child:after {
+        content:"Javascript";
+        position: absolute;
+        right:10px;
+        top:0;
+        background-color:#f5f5f5;
+        padding:3px 6px;
+        font-size: 11px;
+    }
 }
 
 #users {
@@ -251,9 +270,9 @@ td {
             display:inline-block;
             background-color: @lightGrey;
             padding:1rem 0;
-            width:200px;
+            width:25%;
             text-align: center;
-            margin-right:1px;
+            box-shadow: inset 1px 0 0 #fff;
         }
     }
     .avatar {
@@ -421,6 +440,7 @@ pre {
     padding:3rem;
     margin:0;
     line-height:1.5;
+    color:#666;
 }
 
 pre, code {
@@ -431,7 +451,7 @@ pre, code {
 pre .keyword { color: #FF0C4B; }
 pre .string { color: #01DBFF; }
 pre .regexp { color: #15E80B; }
-pre .class { color: #15E80B; font-weight: bold; }
+pre .class { color: #15E80B; }
 pre .special { color: #FFD901; }
 pre .number { color: #01DBFF; }
 pre .comment { color: grey; font-style: italic; }

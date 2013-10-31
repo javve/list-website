@@ -1256,11 +1256,6 @@ td {
 .intro .intro-text .btn {
   margin-right: 1rem;
 }
-.misc {
-  background-color: #edf4f4;
-  border-radius: 7px;
-  padding: 3rem 0;
-}
 .misc h3 {
   margin: 0 0 0.5rem;
 }
@@ -1271,14 +1266,17 @@ td {
   text-align: center;
 }
 .misc .misc-author {
-  padding-right: 15px;
+  background-color: #edf4f4;
+  border-radius: 7px;
+  padding: 3rem;
 }
 .misc .misc-author img {
   float: left;
-  margin-right: 10px;
+  margin-right: 2rem;
 }
 .misc .misc-author h4 {
   margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 .misc .misc-author p {
   font-size: 1.3rem;
@@ -1292,9 +1290,28 @@ td {
   background-color: #edf4f4 !important;
 }
 .tab-content {
-  background-color: #edf4f4;
-  border: solid 1px #ddd;
   border-top: none;
+}
+.tab-content .col-sm-6:first-child {
+  box-shadow: inset -1px 0 #eeeeee;
+}
+.tab-content .col-sm-6:first-child:after {
+  content: "HTML";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  background-color: #f5f5f5;
+  padding: 3px 6px;
+  font-size: 11px;
+}
+.tab-content .col-sm-6:last-child:after {
+  content: "Javascript";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  background-color: #f5f5f5;
+  padding: 3px 6px;
+  font-size: 11px;
 }
 #users {
   margin-bottom: 5rem;
@@ -1318,9 +1335,9 @@ td {
   display: inline-block;
   background-color: #edf4f4;
   padding: 1rem 0;
-  width: 200px;
+  width: 25%;
   text-align: center;
-  margin-right: 1px;
+  box-shadow: inset 1px 0 0 #fff;
 }
 #users .avatar {
   max-width: 150px;
@@ -1478,6 +1495,7 @@ pre {
   padding: 3rem;
   margin: 0;
   line-height: 1.5;
+  color: #666;
 }
 pre,
 code {
@@ -1495,7 +1513,6 @@ pre .regexp {
 }
 pre .class {
   color: #15E80B;
-  font-weight: bold;
 }
 pre .special {
   color: #FFD901;

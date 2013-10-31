@@ -37,8 +37,8 @@
   </div>
 </div>
 
-  <h2>Code</h2>
-<ul class="nav nav-tabs" id="basic-tabs">
+<h2>Annotated code variants</h2>
+<ul class="nav nav-pills" id="basic-tabs">
   <li class="active"><a href="#existing" data-toggle="tab">Existing list</a></li>
   <li><a href="#add" data-toggle="tab">Existing + add</a></li>
   <li><a href="#new" data-toggle="tab">New list</a></li>
@@ -114,5 +114,6 @@ $('#basic-tabs a').click(function (e) {
 });
 </script>
 
-<script type="text/javascript" src="js/libs/hijs.js"></script>
+<script type="text/javascript" src="js/libs/highlight/highlight.pack.js"></script>
 <script src="/js/libs/bootstrap/tab.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
