@@ -49,7 +49,7 @@
   <div class="tab-pane fade active" id="existing">
     <div class="row">
       <div class="col-sm-6">
-<pre><code id="hej">
+<pre><code id="existing-html">
 <%- include basic/existing-html.ejs %>
 </code></pre>
       </div>
@@ -120,25 +120,22 @@ $('#basic-tabs a').click(function (e) {
 <script src="/js/libs/bootstrap/tooltip.js"></script>
 <script>
   hljs.initHighlightingOnLoad();
-  function annotate() {
-    var annotations = [
-      [ 'users', 'This is important' ],
-      [ 'search', 'This is important' ],
-      [ 'sort', 'This is important' ],
-      [ 'name', 'This is important' ],
-      [ 'list', 'This is important' ],
-      [ 'name', 'This is important' ]
-    ];
-    $('code').html(function(i, html) {
-        for (var i = 0; i < annotations.length; i++) {
-          html = html.replace(annotations[i][0], '<span class="annotation" title="'+annotations[i][1]+'">'+annotations[i][0]+'</span>');
-        }
-        return html; //return html.replace(/(BC-\d{3})/g, "<strong>$1</strong>");
-    });
-    $('.annotation').tooltip();
 
-  }
+  var annotations = {
+    'existing-html': [
+      [ 'class.*"(list)"', 'Direct child elements of this container becomes list items' ],
+      [ '(users)', 'Use this ID to define the list container' ],
+      [ '(search)', 'This class automagically makes this input a search field.' ],
+      [ 'class.*(sort)', 'This class automagically makes this element a sort buttons.' ],
+      [ 'sort.*"(name)"', 'What value should this button sort based on?' ],
+      [ 'class.*"(name)"', 'The content of this element becomes the value for this item\'s name-attribute' ]
+    ]
+  };
+
   $(window).load(function() {
-    setTimeout(annotate, 1000);
+    setTimeout(function() {
+      annotate(annotations);
+      $('code').tooltip();
+    }, 1000);
   })
 </script>
