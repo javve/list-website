@@ -55,7 +55,8 @@ app.use(function(req, res, next){
 app.get('/', function(req, res) {
     res.render('index', {
         title: "List.js - Add search, sort and flexibility to plain HTML lists or tables with cross-browser native JavaScript by @javve",
-        description: "You do want a 3 KB native JavaScript that makes your plain HTML lists and tables super flexible, searchable, sortable and filterable? Yes?"
+        description: "You do want a 3 KB native JavaScript that makes your plain HTML lists and tables super flexible, searchable, sortable and filterable? Yes?",
+        home: true
     });
 });
 app.get('/examples', function(req, res) {
@@ -83,50 +84,51 @@ app.get('/performance', function(req, res) {
     });
 });
 
-app.get('/plugins', function(req, res) {
-    res.render('plugins/index', {
-        plugins: true
-    });
-});
-app.get('/plugins/fuzzy-search', function(req, res) {
-    res.render('plugins/fuzzy-search', {
-        plugins: true,
-        title: "List.js - Paging Plugin",
-        description: "List.js is super flexible and here are two examples of how to use it."
-    });
-});
-app.get('/plugins/paging', function(req, res) {
-    res.render('plugins/paging', {
-        plugins: true
-    });
-});
-
 app.get('/docs', function(req, res) {
     res.render('docs/index', {
         docs: true,
         name: "Documentation",
-        examples: examples
+        exampleList: examples
     });
 });
 app.get('/docs/options', function(req, res) {
     res.render('docs/options', {
         docs: true,
         name: "Options",
-        examples: examples
+        exampleList: examples
     });
 });
 app.get('/docs/list-api', function(req, res) {
     res.render('docs/list-api', {
         docs: true,
         name: "List API",
-        examples: examples
+        exampleList: examples
     });
 });
 app.get('/docs/item-api', function(req, res) {
     res.render('docs/item-api', {
         docs: true,
         name: "Item API",
-        examples: examples
+        exampleList: examples
+    });
+});
+
+
+app.get('/docs/plugins', function(req, res) {
+    res.render('docs/plugins/index', {
+        plugins: true
+    });
+});
+app.get('/docs/plugins/fuzzy-search', function(req, res) {
+    res.render('docs/plugins/fuzzy-search', {
+        plugins: true,
+        title: "List.js - Paging Plugin",
+        description: "List.js is super flexible and here are two examples of how to use it."
+    });
+});
+app.get('/docs/plugins/paging', function(req, res) {
+    res.render('docs/plugins/paging', {
+        plugins: true
     });
 });
 

@@ -1,20 +1,21 @@
 <h4>Sections</h4>
 <ul>
-    <li><a href="/docs/getting-started">Getting started</a></li>
+    <li><a href="/docs">Getting started</a></li>
     <li><a href="/docs/options">Options</a></li>
     <li><a href="/docs/list-api">List API</a></li>
     <li><a href="/docs/item-api">Item API</a></li>
 </ul>
 <h4>Plugins</h4>
 <ul>
-    <li><a href="/docs/options">Paging</a></li>
-    <li><a href="/docs/options">Fuzzy search</a></li>
+    <li><a href="/docs/plugins">Introduction</a></li>
+    <li><a href="/docs/plugins/paging">Paging</a></li>
+    <li><a href="/docs/plugins/fuzzy-search">Fuzzy search</a></li>
 </ul>
 
 <h4>Examples</h4>
 <ul>
     <li><a href="/examples">Basic list</a></li>
-    <% for (var i in examples) { %>
-    <li><a href="/examples/<%= i %>"><%= examples[i].name %></a></li>
+    <% for (var i in exampleList) { %>
+    <li><a href="/examples/<%= i %>"><%= exampleList[i].name %></a></li>
     <% } %>
 </ul>
