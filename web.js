@@ -116,24 +116,30 @@ app.get('/docs/item-api', function(req, res) {
 
 app.get('/docs/plugins', function(req, res) {
     res.render('docs/plugins/index', {
-        plugins: true
+        docs: true,
+        name: "Item API",
+        exampleList: examples
     });
 });
-app.get('/docs/plugins/fuzzy-search', function(req, res) {
-    res.render('docs/plugins/fuzzy-search', {
-        plugins: true,
-        title: "List.js - Paging Plugin",
-        description: "List.js is super flexible and here are two examples of how to use it."
+app.get('/docs/plugins/fuzzysearch', function(req, res) {
+    res.render('docs/plugins/fuzzysearch', {
+        docs: true,
+        name: "Item API",
+        exampleList: examples
     });
 });
-app.get('/docs/plugins/paging', function(req, res) {
-    res.render('docs/plugins/paging', {
-        plugins: true
+app.get('/docs/plugins/pagination', function(req, res) {
+    res.render('docs/plugins/pagination', {
+        docs: true,
+        name: "Item API",
+        exampleList: examples
     });
 });
 
 app.get('/changelog', function(req, res) {
-    res.render('changelog');
+    res.render('changelog', {
+        changelog: true
+    });
 });
 
 // 404

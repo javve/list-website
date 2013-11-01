@@ -1586,9 +1586,13 @@ td {
   background-color: #edf4f4;
   border-radius: 7px;
   padding: 1.2rem 1.5rem;
+  margin-bottom: 5px;
 }
 .docs pre code {
   background-color: transparent;
+}
+.docs li {
+  margin-bottom: 10px;
 }
 .docs-parameter-description {
   color: #999;
@@ -1628,11 +1632,23 @@ td {
 /* * * * * * * * * * * * * * * * * * * * *
 * Syntax coloring
 * * * * * * * * * * * * * * * * * * * * */
+code {
+  background-color: #edf4f4;
+  border: solid 1px #ddeaea;
+  border-radius: 5px;
+  padding: 1px 4px;
+}
 pre {
   padding: 3rem;
   margin: 0;
   line-height: 1.7;
   color: #666;
+}
+pre code {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  border-radius: 0;
 }
 pre,
 code {
