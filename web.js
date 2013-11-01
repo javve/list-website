@@ -1,7 +1,8 @@
 var express = require('express'),
     lessMiddleware = require('less-middleware'),
     pjax = require('express-pjax'),
-    partials = require('express-partials');
+    partials = require('express-partials'),
+    examples = require('./examples');
 
 require('ejs');
 
@@ -59,21 +60,24 @@ app.get('/', function(req, res) {
 });
 app.get('/examples', function(req, res) {
     res.render('examples/index', {
-        examples: true,
-        title: "List.js - Examples of how to use the script",
-        description: "List.js is super flexible and here are two examples of how to use it."
+        example: {
+            name: "Annotated example",
+            title: "List.js - Examples of how to use the script",
+            description: "List.js is super flexible and here are two examples of how to use it.",
+        },
+        examples: examples
     });
 });
-app.get('/examples/add-edit-remove', function(req, res) {
-    res.render('examples/add-edit-remove', {
-        examples: true,
-        title: "List.js - Examples of how to use the script",
-        description: "List.js is super flexible and here are two examples of how to use it."
+app.get('/examples/:id', function(req, res) {
+    res.render('examples/pen', {
+        example: examples[req.params.id],
+        examples: examples
     });
 });
+
 app.get('/performance', function(req, res) {
     res.render('performance', {
-        examples: true,
+        mainMenu: true,
         title: "List.js - Performance, wrooooom! Index, search and sort thousands of items. By @javve",
         description: "List.js is pretty fast. Try it out yourself!"
     });
@@ -99,17 +103,23 @@ app.get('/plugins/paging', function(req, res) {
 
 app.get('/docs', function(req, res) {
     res.render('docs/index', {
-        plugins: true
+        docs: true,
+        name: "Documentation",
+        examples: examples
     });
 });
 app.get('/docs/options', function(req, res) {
     res.render('docs/options', {
-        plugins: true
+        docs: true,
+        name: "Options",
+        examples: examples
     });
 });
 app.get('/docs/methods', function(req, res) {
     res.render('docs/methods', {
-        plugins: true
+        docs: true,
+        name: "Methods",
+        examples: examples
     });
 });
 

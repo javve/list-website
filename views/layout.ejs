@@ -45,15 +45,15 @@
 
 <body>
 
-  <% if (locals.examples) { %>
+  <% if (!locals.home) { %>
   <div class="menu">
     <div class="container">
       <ul class="main">
-        <li><a class="active" href="/">Home</a></li>
-        <li><a href="/docs">Docs</a></li>
-        <li><a href="/examples">Examples</a></li>
-        <li><a href="/plugins/paging">Plugins</a></li>
-        <li><a href="/changelog">Changelog</a></li>
+        <li><a <% if (locals.home) { %>class="active"<% } %>  href="/">Home</a></li>
+        <li><a <% if (locals.docs) { %>class="active"<% } %>href="/docs">Docs</a></li>
+        <li><a <% if (locals.examples) { %>class="active"<% } %>href="/examples">Examples</a></li>
+        <li><a <% if (locals.plugins) { %>class="active"<% } %>href="/plugins/paging">Plugins</a></li>
+        <li><a <% if (locals.changelog) { %>class="active"<% } %>href="/changelog">Changelog</a></li>
         <li><a href="https://raw.github.com/javve/list/master/list.min.js" onClick="javascript: _gaq.push(['_trackPageview', '/download/list.min.js.menu']);">Download</a></li>
       </ul>
       <% if (locals.plugins) { %>

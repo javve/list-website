@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-7">
+    <h1><%= example.name %></h1>
+    <ul class="menu-sub">
+      <li><a href="/examples">Basic list</a></li>
+      <% for (var i in examples) { %>
+        <li><a href="/examples/<%= i %>"><%= examples[i].name %></a></li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="col-sm-5" style="text-align:right;">
+    <%- include ../shared/carbon.ejs %>
+  </div>
+</div>

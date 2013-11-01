@@ -1,16 +1,4 @@
-<div class="row">
-  <div class="col-sm-7">
-    <h1>Examples</h1>
-    <ul class="menu-sub">
-      <li><a href="/examples">Basic list</a></li>
-      <li><a href="/examples/add-edit-remove">Add, edit & remove</a></li>
-      <li><a href="/performance">Performance</a></li>
-    </ul>
-  </div>
-  <div class="col-sm-5" style="text-align:right;">
-    <%- include ../shared/carbon.ejs %>
-  </div>
-</div>
+<%- include menu.ejs %>
 
 <div id="users">
   <h2>Basic list</h2>
@@ -54,7 +42,7 @@
 </code></pre>
       </div>
       <div class="col-sm-6">
-<pre><code>
+<pre><code id="existing-js">
 <%- include basic/existing-js.ejs %>
 </code></pre>
       </div>
@@ -64,12 +52,12 @@
   <div class="tab-pane fade" id="add">
     <div class="row">
       <div class="col-sm-6">
-<pre><code>
+<pre><code id="add-html">
 <%- include basic/add-html.ejs %>
 </code></pre>
       </div>
       <div class="col-sm-6">
-<pre><code>
+<pre><code id="add-js">
 <%- include basic/add-js.ejs %>
 </code></pre>
       </div>
@@ -79,12 +67,12 @@
   <div class="tab-pane fade" id="new">
     <div class="row">
       <div class="col-sm-6">
-<pre><code>
+<pre><code id="new-html">
 <%- include basic/add-html.ejs %>
 </code></pre>
       </div>
       <div class="col-sm-6">
-<pre><code>
+<pre><code id="new-js">
 <%- include basic/add-js.ejs %>
 </code></pre>
       </div>
@@ -103,7 +91,7 @@
         valueNames: [ 'name', 'description' ]
     };
 
-    var featureList = new List('users', options);
+    var userList = new List('users', options);
 </script>
 <!-- End of List.js stuff -->
 
@@ -128,7 +116,12 @@ $('#basic-tabs a').click(function (e) {
       [ '(search)', 'This class automagically makes this input a search field.' ],
       [ 'class.*(sort)', 'This class automagically makes this element a sort buttons.' ],
       [ 'sort.*"(name)"', 'What value should this button sort based on?' ],
-      [ 'class.*"(name)"', 'The content of this element becomes the value for this item\'s name-attribute' ]
+      [ 'class.*"(name)"', 'The content of this element becomes the value for this item\'s name-attribute' ],
+      [ 'class.*"(born)"', 'The content of this element becomes the value for this item\'s born-attribute' ]
+    ],
+    'existing-js': [
+      [ '(users)', 'ID of the list container'],
+      [ '(valueNames)', 'Which value names does each item have?']
     ]
   };
 

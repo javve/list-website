@@ -1287,6 +1287,7 @@ td {
   z-index: 100;
   margin-top: -80px;
   margin-bottom: 4rem;
+  background-color: #edf4f4;
 }
 .menu ul {
   display: inline-block;
@@ -1319,7 +1320,7 @@ td {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 0.7rem 0;
+  padding: 1.5rem 0 0.7rem;
   background-color: #28a8e0;
   text-align: center;
 }
@@ -1561,6 +1562,16 @@ td {
 }
 .paging li a:hover {
   color: #eee;
+}
+/* * * * * * * * * * * * * * * * * * * * *
+* Documentation
+* * * * * * * * * * * * * * * * * * * * */
+.docs-top {
+  border-bottom: solid 1px #edf4f4;
+  padding-bottom: 20px;
+}
+.docs-top h1 {
+  padding-top: 20px;
 }
 /* * * * * * * * * * * * * * * * * * * * *
 * Changelog
