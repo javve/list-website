@@ -79,6 +79,8 @@
       </li>
     </ul>
 
+    <h4>Notice</h4>
+    <p>The number of items at each page are decided by the List.js own property page. To set this just add page: Number to the option object sent into the List.js constructor (as been done in both of the examples at this page).</p>
 
     <h3>Generated output</h3>
 
@@ -105,6 +107,41 @@
   &lt;/ul>
 &lt;/div>
 </code></pre>
+
+    <h3>Double pagination</h3>
+
+<pre><code>&lt;div id="listId">
+  &lt;ul class="pagingTop">&lt;/ul>
+  &lt;ul class="list">
+    // A bunch of items
+  &lt;/ul>
+  &lt;ul class="pagingBottom">&lt;/ul>
+&lt;/div>
+
+&lt;script>
+  var pagingTopOptions = {
+    name: "pagingTop",
+    pagingClass: "pagingTop",
+    outerWindow: 2
+  };
+  var pagingBottomOptions = {
+    name: "pagingBottom",
+    pagingClass: "pagingBottom",
+    innerWindow: 3,
+    left: 2,
+    right: 4
+  };
+  var listOptions = {
+    valueNames: [ 'name', 'category' ],
+    page: 3,
+    plugins: [
+        [ 'paging', pagingTopOptions],
+        [ 'paging', pagingBottomOptions]
+    ]
+  };
+
+  var listObj = new List('listId', listOptions);
+&lt;/script></code></pre>
 
   </div>
 </div>

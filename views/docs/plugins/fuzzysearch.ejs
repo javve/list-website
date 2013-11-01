@@ -6,22 +6,27 @@
   <div class="col-sm-9 docs">
 
 
-    <h2>Pagination plugin</h2>
+    <h2>Fuzzy search plugin</h2>
 
     <p>To use the plugin you first need to download it:</p>
 
-    <h4>Via <a href="https://github.com/javve/list.pagination.js">Github</a></h4>
-    <a href="https://raw.github.com/javve/list.pagination.js/master/dist/list.pagination.min.js" class="btn btn-primary">Download List.pagination.js</a>
+    <h4>Via <a href="https://github.com/javve/list.fuzzysearch.js">Github</a></h4>
+    <a href="https://raw.github.com/javve/list.fuzzysearch.js/master/dist/list.fuzzysearch.min.js" class="btn btn-primary">Download List.fuzzysearch.js</a>
 
     <h4>Via <a href="https://github.com/bower/bower">Bower</a></h4>
-    <pre><code>bower install list.pagination.js</code></pre>
+    <pre><code>bower install list.fuzzysearch.js</code></pre>
 
     <h4>Via <a href="https://github.com/component/component">Component</a></h4>
-    <pre><code>component install list.pagination.js</code></pre>
+    <pre><code>component install list.fuzzysearch.js</code></pre>
 
     <h4>Via <a href="http://cdnjs.com/">CDNJS</a></h4>
-    <pre><code>&lt;link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/List.pagination.js/1.0.0/list.pagination.min.js" /></code></pre>
+    <pre><code>&lt;link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/List.fuzzysearch.js/1.0.0/list.fuzzysearch.min.js" /></code></pre>
 
+    <p>A big thanks to <a href="https://github.com/LuukvE">LuukvE</a> who made a <a href="https://github.com/LuukvE/list/commit/a75b6ef5649c5fb4232a40ef2f5191d0b57e1ede">commit</a> from which I could create this Fuzzy Search plugin.</p>
+
+    <h3>The difference between Fuzzy Search and List.js default search</h3>
+
+    <p>The default search will conduct a time efficient search for an exact match in the content searched, while the fuzzy search will render results depending on if they are included anywhere in the content.</p>
 
 <h3>Basic example</h3>
 <pre><code>&lt;div id="listId">

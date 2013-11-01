@@ -63,7 +63,7 @@ app.get('/examples', function(req, res) {
     res.render('examples/index', {
         example: {
             name: "Annotated example",
-            title: "List.js - Examples of how to use the script",
+            title: "List.js / Examples / Annotated code",
             description: "List.js is super flexible and here are two examples of how to use it.",
         },
         examples: examples
