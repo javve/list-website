@@ -1566,6 +1566,29 @@ td {
 /* * * * * * * * * * * * * * * * * * * * *
 * Documentation
 * * * * * * * * * * * * * * * * * * * * */
+.docs {
+  color: #555;
+}
+.docs p {
+  line-height: 1.5;
+}
+.docs strong,
+.docs b {
+  color: #222;
+  font-weight: bold;
+}
+.docs pre {
+  background-color: #edf4f4;
+  border-radius: 7px;
+  padding: 1.2rem 1.5rem;
+}
+.docs pre code {
+  background-color: transparent;
+}
+.docs-parameter-description {
+  color: #999;
+  font-size: 80%;
+}
 .docs-top {
   border-bottom: solid 1px #edf4f4;
   padding-bottom: 20px;

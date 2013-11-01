@@ -1,0 +1,58 @@
+<%- include top.ejs %>
+<div class="row">
+  <div class="col-sm-3">
+    <%- include menu.ejs %>
+  </div>
+  <div class="col-sm-9 docs">
+
+<h2>
+<a name="item-api" class="anchor" href="#item-api"><span class="octicon octicon-link"></span></a>Item API</h2>
+
+<p>These methods are available for all Items that are returned by
+the list.</p>
+
+<h3>
+<a name="properties-1" class="anchor" href="#properties-1"><span class="octicon octicon-link"></span></a>Properties</h3>
+
+<ul>
+<li>
+<strong>elm</strong> <em>(Element)</em>
+The actual item DOM element</li>
+</ul><h3>
+<a name="methods-1" class="anchor" href="#methods-1"><span class="octicon octicon-link"></span></a>Methods</h3>
+
+<ul>
+<li>
+<p><strong>values(newValues)</strong></p>
+
+<ul>
+<li>
+<p>newValues <em>optional</em>
+If variable newValues are present the new values replaces the current item values
+and updates the list.
+If newValues are not present, the function returns the current values.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">item</span><span class="p">.</span><span class="nx">values</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">"Jonny"</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span> <span class="nx">city</span><span class="o">:</span> <span class="s2">"Umeå"</span> <span class="p">}</span>
+<span class="nx">item</span><span class="p">.</span><span class="nx">values</span><span class="p">({</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="nx">city</span><span class="o">:</span> <span class="s2">"Stockholm"</span>
+<span class="p">});</span>
+<span class="nx">item</span><span class="p">.</span><span class="nx">values</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">"Jonny"</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span> <span class="nx">city</span><span class="o">:</span> <span class="s2">"Stockholm"</span> <span class="p">}</span>
+</pre></div>
+</li>
+</ul>
+</li>
+<li><p><strong>show()</strong><br>
+Shows the item</p></li>
+<li><p><strong>hide()</strong><br>
+Hides the item (removes the element from the list, and then when its shown it's appended again. The element will thereby change position in the list. A bug, but a good solution is yet to be found.)</p></li>
+<li><p><strong>matching()</strong><br>
+Returns boolean. True if the item matches the current filter and search. Visible items 
+always matches, but matching items are not always visible.</p></li>
+<li><p><strong>visisble()</strong><br>
+Returns boolean. True if the item is visible. Visible items 
+always matches, but matching items are not always visible.</p></li>
+</ul>
+
+
+</div></div>

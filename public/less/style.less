@@ -413,6 +413,29 @@ td {
 * Documentation
 * * * * * * * * * * * * * * * * * * * * */
 
+.docs {
+    color:#555;
+    p {
+        line-height: 1.5;
+    }
+    strong, b {
+        color:#222;
+        font-weight: bold;
+    }
+    pre {
+        background-color: @lightGrey;
+        border-radius: 7px;
+        padding:1.2rem 1.5rem;
+        code {
+            background-color: transparent;
+        }
+    }
+}
+.docs-parameter-description {
+    color:#999;
+    font-size:80%;
+}
+
 .docs-top {
     border-bottom:solid 1px @lightGrey;
     padding-bottom:20px;

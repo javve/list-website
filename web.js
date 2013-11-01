@@ -115,10 +115,17 @@ app.get('/docs/options', function(req, res) {
         examples: examples
     });
 });
-app.get('/docs/methods', function(req, res) {
-    res.render('docs/methods', {
+app.get('/docs/list-api', function(req, res) {
+    res.render('docs/list-api', {
         docs: true,
-        name: "Methods",
+        name: "List API",
+        examples: examples
+    });
+});
+app.get('/docs/item-api', function(req, res) {
+    res.render('docs/item-api', {
+        docs: true,
+        name: "Item API",
         examples: examples
     });
 });
