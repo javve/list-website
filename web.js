@@ -21,6 +21,10 @@ app.configure(function() {
     }));
     app.use(express.static(__dirname + "/public"));
     app.use(partials());
+    app.use(function(req, res, next) {
+      res.locals.url = req.url;
+      next();
+    });
 });
 
 

@@ -1321,6 +1321,10 @@ td {
   display: inline-block;
   margin-right: 2rem;
 }
+.docs-menu a.active {
+  font-weight: 500;
+  color: #2e2e2e;
+}
 .footer {
   position: fixed;
   bottom: 0;
