@@ -1357,6 +1357,9 @@ td {
   margin: 0 0 2.5rem;
   color: #a39e9a;
 }
+.intro .intro-text h2 a {
+  font-weight: 500;
+}
 .intro .intro-text .btn {
   margin-right: 1rem;
 }
@@ -1386,6 +1389,14 @@ td {
   font-size: 1.3rem;
   color: #7a7a7a;
   margin-top: 0rem;
+}
+#startpage-example {
+  -webkit-transition: opacity 0.8s ease-in-out;
+  opacity: 0.2;
+}
+#startpage-example.startpage-focus {
+  opacity: 1;
+  -webkit-transition: opacity 0.8s ease-in-out;
 }
 /* * * * * * * * * * * * * * * * * * * * *
 * Examples

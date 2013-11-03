@@ -4,7 +4,7 @@
   </div>
   <div class="intro-text  col-sm-7">
     <h1>List.js</h1>
-    <h2>Tiny, yet powerful and incredibly fast vanilla Javascript that adds search, sort and flexibility to plain HTML lists or tables.</h2>
+    <h2>Tiny, yet powerful and incredibly fast vanilla Javascript that adds search, sort and flexibility to plain HTML lists or tables. <a href="/docs">Learn more</a></h2>
     <a href="https://raw.github.com/javve/list/master/list.min.js" class="btn btn-primary" onclick="javascript: _gaq.push(['_trackPageview', '/download/list.min.js.button']);">
       Download
     </a>
@@ -37,3 +37,13 @@
 
   </div>
 </div>
+<div id="startpage-example">
+<%- include examples/annotated-example.ejs %>
+</div>
+<script>
+  var show = function() {
+    $('#startpage-example').addClass('startpage-focus');
+    $(window).off('scoll', show);
+  };
+  $(window).on('scroll', show);
+</script>

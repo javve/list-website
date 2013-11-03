@@ -194,6 +194,9 @@ td {
             font-weight: 300;
             margin: 0 0 2.5rem;
             color:@grey;
+            a {
+                font-weight: 500;
+            }
         }
         .btn {
             margin-right:1rem;
@@ -228,6 +231,15 @@ td {
             color:lighten(@black, 30%);
             margin-top:0rem;
         }
+    }
+}
+
+#startpage-example {
+    -webkit-transition: opacity .8s ease-in-out;
+    opacity: 0.2;
+    &.startpage-focus {
+        opacity: 1;
+        -webkit-transition: opacity .8s ease-in-out;
     }
 }
 
