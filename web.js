@@ -86,6 +86,12 @@ app.get('/performance', function(req, res) {
     });
 });
 
+app.get('/press', function(req, res) {
+    res.render('press', {
+        press: true
+    });
+});
+
 app.get('/docs', function(req, res) {
     res.render('docs/index', {
         docs: true,
