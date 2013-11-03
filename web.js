@@ -1,6 +1,5 @@
 var express = require('express'),
     lessMiddleware = require('less-middleware'),
-    pjax = require('express-pjax'),
     partials = require('express-partials'),
     examples = require('./examples');
 
@@ -22,7 +21,6 @@ app.configure(function() {
     }));
     app.use(express.static(__dirname + "/public"));
     app.use(partials());
-    app.use(pjax());
 });
 
 
