@@ -1,0 +1,128 @@
+
+<div id="users">
+  <h2>Basic list</h2>
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">Sort by name</button>
+  <button class="sort" data-sort="name">Sort by year born</button>
+  <div class="list">
+    <div>
+      <h3 class="name">Jonny Strömberg</h3>
+      <p class="born">1986</p>
+    </div>
+    <div>
+      <h3 class="name">Jonas Arnklint</h3>
+      <p class="born">1985</p>
+    </div>
+    <div>
+      <h3 class="name">Martina Elm</h3>
+      <p class="born">1986</p>
+    </div>
+    <div>
+      <h3 class="name">Gustaf Lindqvist</h3>
+      <p class="born">1983</p>
+    </div>
+  </div>
+</div>
+
+<h2>Annotated code variants</h2>
+<ul class="nav nav-pills" id="basic-tabs">
+  <li class="active"><a href="#existing" data-toggle="tab">Existing list</a></li>
+  <li><a href="#add" data-toggle="tab">Existing + add</a></li>
+  <li><a href="#new" data-toggle="tab">New list</a></li>
+</ul>
+
+<div class="tab-content">
+
+  <div class="tab-pane fade active" id="existing">
+    <div class="row">
+      <div class="col-sm-6">
+<pre><code id="existing-html">
+<%- include basic/existing-html.ejs %>
+</code></pre>
+      </div>
+      <div class="col-sm-6">
+<pre><code id="existing-js">
+<%- include basic/existing-js.ejs %>
+</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="add">
+    <div class="row">
+      <div class="col-sm-6">
+<pre><code id="add-html">
+<%- include basic/add-html.ejs %>
+</code></pre>
+      </div>
+      <div class="col-sm-6">
+<pre><code id="add-js">
+<%- include basic/add-js.ejs %>
+</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="new">
+    <div class="row">
+      <div class="col-sm-6">
+<pre><code id="new-html">
+<%- include basic/add-html.ejs %>
+</code></pre>
+      </div>
+      <div class="col-sm-6">
+<pre><code id="new-js">
+<%- include basic/add-js.ejs %>
+</code></pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- Start of List.js stuff -->
+<script type="text/javascript" type="text/javascript">
+    var options = {
+        valueNames: [ 'name', 'description' ]
+    };
+
+    var userList = new List('users', options);
+</script>
+<!-- End of List.js stuff -->
+
+<script>
+$('#basic-tabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+</script>
+
+<script src="/js/libs/bootstrap/transition.js"></script>
+<script src="/js/libs/bootstrap/tab.js"></script>
+<script src="/js/libs/bootstrap/tooltip.js"></script>
+<script>
+  var annotations = {
+    'existing-html': [
+      [ 'class.*"(list)"', 'Direct child elements of this container becomes list items' ],
+      [ '(users)', 'Use this ID to define the list container' ],
+      [ '(search)', 'This class automagically makes this input a search field.' ],
+      [ 'class.*(sort)', 'This class automagically makes this element a sort buttons.' ],
+      [ 'sort.*"(name)"', 'What value should this button sort based on?' ],
+      [ 'class.*"(name)"', 'The content of this element becomes the value for this item\'s name-attribute' ],
+      [ 'class.*"(born)"', 'The content of this element becomes the value for this item\'s born-attribute' ]
+    ],
+    'existing-js': [
+      [ '(users)', 'ID of the list container'],
+      [ '(valueNames)', 'Which value names does each item have?']
+    ]
+  };
+
+  $(window).load(function() {
+    setTimeout(function() {
+      annotate(annotations);
+      $('code').tooltip();
+    }, 1000);
+  })
+</script>

@@ -136,6 +136,14 @@ app.get('/docs/plugins/pagination', function(req, res) {
     });
 });
 
+app.get('/docs/plugins/build', function(req, res) {
+    res.render('docs/plugins/build', {
+        docs: true,
+        name: "Item API",
+        exampleList: examples
+    });
+});
+
 app.get('/changelog', function(req, res) {
     res.render('changelog', {
         changelog: true
