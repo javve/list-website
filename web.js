@@ -89,7 +89,12 @@ app.get('/performance', function(req, res) {
 app.get('/docs', function(req, res) {
     res.render('docs/index', {
         docs: true,
-        name: "Documentation",
+        exampleList: examples
+    });
+});
+app.get('/docs/tldr', function(req, res) {
+    res.render('docs/tldr', {
+        docs: true,
         exampleList: examples
     });
 });

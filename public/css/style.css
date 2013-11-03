@@ -1321,6 +1321,9 @@ td {
   display: inline-block;
   margin-right: 2rem;
 }
+.docs-menu li {
+  margin-bottom: 4px;
+}
 .docs-menu a.active {
   font-weight: 500;
   color: #2e2e2e;
@@ -1607,7 +1610,7 @@ td {
   background-color: transparent;
 }
 .docs li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .docs-parameter-description {
   color: #999;
