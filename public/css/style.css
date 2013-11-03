@@ -1200,6 +1200,12 @@ body {
   color: #a39e9a;
   padding: 80px 0 150px;
 }
+@media (min-width: 768px) {
+  .container {
+    width: auto;
+    max-width: 940px;
+  }
+}
 a {
   color: #28a8e0;
 }
