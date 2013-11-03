@@ -124,21 +124,18 @@ app.get('/docs/item-api', function(req, res) {
 app.get('/docs/plugins', function(req, res) {
     res.render('docs/plugins/index', {
         docs: true,
-        name: "Item API",
         exampleList: examples
     });
 });
 app.get('/docs/plugins/fuzzysearch', function(req, res) {
     res.render('docs/plugins/fuzzysearch', {
         docs: true,
-        name: "Item API",
         exampleList: examples
     });
 });
 app.get('/docs/plugins/pagination', function(req, res) {
     res.render('docs/plugins/pagination', {
         docs: true,
-        name: "Item API",
         exampleList: examples
     });
 });
@@ -146,14 +143,14 @@ app.get('/docs/plugins/pagination', function(req, res) {
 app.get('/docs/plugins/build', function(req, res) {
     res.render('docs/plugins/build', {
         docs: true,
-        name: "Item API",
         exampleList: examples
     });
 });
 
-app.get('/changelog', function(req, res) {
-    res.render('changelog', {
-        changelog: true
+app.get('/docs/changelog', function(req, res) {
+    res.render('docs/changelog', {
+        docs: true,
+        exampleList: examples
     });
 });
 
