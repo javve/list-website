@@ -1395,7 +1395,8 @@ td {
 * Start page
 * * * * * * * * * * * * * * * * * * * * */
 .intro {
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+  margin-top: 2rem;
 }
 .intro .intro-logo {
   text-align: center;
@@ -1485,7 +1486,7 @@ td {
   margin-bottom: 1rem;
 }
 .startpage-quotes {
-  padding: 40px 0;
+  padding: 60px 0;
 }
 .startpage-quotes:before,
 .startpage-quotes:after {
