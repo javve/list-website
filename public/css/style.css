@@ -259,7 +259,7 @@ hr {
   background-image: none !important;
   background-color: #fff !important;
   border: solid 1px #e5e5e5 !important;
-  border-radius: 6px !important;
+  border-radius: 5px !important;
 }
 .container {
   margin-right: auto;
@@ -1472,6 +1472,7 @@ td {
 .misc .misc-author img {
   float: left;
   margin-right: 2rem;
+  border-radius: 5px;
 }
 .misc .misc-author h4 {
   margin-top: 0;
