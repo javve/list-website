@@ -303,7 +303,7 @@ td {
   width: 328px;
   height: 334px;
   float: left;
-  margin: -20px 0 -15px 0;
+  margin: -20px -6px -15px 40px;
 }
 .slogan {
   display: none;
@@ -314,17 +314,17 @@ td {
   margin-left: -10000px;
 }
 .download {
-  clear: left;
-  float: left;
   padding-top: 25px;
   margin-left: 20px;
+  height: 113px;
+  text-align: center;
 }
 .download-btn {
   background: url('../images/bg/download.png');
   width: 217px;
   height: 76px;
-  float: left;
-  display: block;
+  text-align: left;
+  display: inline-block;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -361,7 +361,7 @@ td {
   padding: 13px 20px 5px;
   clear: both;
   border-radius: 10px;
-  margin: 0 0 50px 24px;
+  margin: 0 0 50px 50px;
   width: 604px;
   border-bottom: solid 1px #666;
   background-color: rgba(255, 255, 255, 0.1);
