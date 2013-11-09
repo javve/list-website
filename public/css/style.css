@@ -1408,6 +1408,10 @@ td {
   font-size: 7.2rem;
   margin: 0 0 0.1rem;
 }
+.intro .intro-text h1 small {
+  font-size: 3rem;
+  color: #d4d1cf;
+}
 .intro .intro-text h2 {
   font-size: 2.5rem;
   font-weight: 300;
@@ -1416,6 +1420,9 @@ td {
 }
 .intro .intro-text h2 a {
   font-weight: 500;
+}
+.intro .intro-text h2 em {
+  color: #716b66;
 }
 .intro .intro-text .btn {
   margin-right: 1rem;
