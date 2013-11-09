@@ -225,6 +225,7 @@ td {
     background-color:@lightGrey;
     border-radius: 7px;
     padding:3rem;
+    color:#333;
     h3 {
         margin:0 0 0.5rem;
     }
@@ -234,19 +235,27 @@ td {
     .misc-carbon {
         float:right;
         width:300px;
-        height:120px;
+        height:118px;
         background-color:darken(@lightGrey, 5%);
         border-radius: 7px;
         margin-left:20px;
-        &:before {
-            content:"Hidden CarbonAds :(";
-            width:300px;
+        position: relative;;
+        &:before & .loaded {
+            content:"Everytime you hide an ad... An open source developer got to go to bed instead of buy a coffee :'(";
+            width:260px;
             display: block;
             text-align: center;
-            line-height:120px;
+            left:20px;
+            top:30px;
+            position: relative;
+            font-size:1.2rem;
+            font-family: monaco, monospace;
         }
-        div {
-            display:none;
+        #carbonads-container {
+            position: absolute;
+            z-index: 2;
+            right:0;
+            top:0;
         }
     }
     .misc-author {
@@ -254,13 +263,9 @@ td {
             float:left;
             margin-right:2rem;
         }
-        h4 {
-            margin-bottom:0.5rem;
-            margin-top: 0;
-        }
         p {
-            font-size:1.3rem;
-            color:lighten(@black, 30%);
+            font-size:1.4rem;
+            color:lighten(@black, 10%);
             margin-top:0rem;
         }
     }
