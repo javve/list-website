@@ -41,9 +41,9 @@ app.configure(function(){
 * Locals
 */
 app.locals({
-    title: "List.js - Add search, sort and flexibility to plain HTML lists or tables with cross-browser native JavaScript by @javve",
-    description: "You do want a 3 KB native JavaScript that makes your plain HTML lists and tables super flexible, searchable, sortable and filterable? Yes?",
-    ogImage: "http://listjs.com/images/graphics/listjs-logo-bg.png"
+    title: "List.js - Search, sort, filters, flexibility to tables, list and more!",
+    description: "Perfect library for adding search, sort, filters and flexibility to tables, lists and various HTML elements. Built to be invisible and work on existing HTML.",
+    ogImage: "http://listjs.com/images/graphics/listjs-logo.png"
 });
 app.use(function(req, res, next){
     res.locals.currentUrl = req.protocol + '://' + req.host + req.url;
@@ -56,8 +56,6 @@ app.use(function(req, res, next){
 */
 app.get('/', function(req, res) {
     res.render('index', {
-        title: "List.js - Add search, sort and flexibility to plain HTML lists or tables with cross-browser native JavaScript by @javve",
-        description: "You do want a 3 KB native JavaScript that makes your plain HTML lists and tables super flexible, searchable, sortable and filterable? Yes?",
         home: true
     });
 });
@@ -78,6 +76,7 @@ app.get('/performance', function(req, res) {
 
 app.get('/overview', function(req, res) {
     res.render('overview/index', {
+        title: "Overview - List.js",
         overview: true,
         exampleList: examples
     });
@@ -89,6 +88,7 @@ app.get('/overview/press', function(req, res) {
 });
 app.get('/overview/changelog', function(req, res) {
     res.render('overview/changelog', {
+        title: "Changelog - List.js",
         overview: true,
         exampleList: examples
     });
@@ -96,12 +96,16 @@ app.get('/overview/changelog', function(req, res) {
 
 app.get('/docs', function(req, res) {
     res.render('docs/index', {
+        title: "Documentation - List.js",
+        description: "The core thing in List.js have always been simplicity. It should require as little effort as possible to use the script and it's features.",
         docs: true,
         exampleList: examples
     });
 });
 app.get('/docs/options', function(req, res) {
     res.render('docs/options', {
+        title: "Options / Parameters - Documentation - List.js",
+        description: "Using List.js is pretty much plug and play, but you can change some options if you feel like it.",
         docs: true,
         name: "Options",
         exampleList: examples
@@ -109,6 +113,8 @@ app.get('/docs/options', function(req, res) {
 });
 app.get('/docs/list-api', function(req, res) {
     res.render('docs/list-api', {
+        title: "List API - Documentation - List.js",
+        description: "When you've initiated the List-object you got a bunch of different properties and methods available.",
         docs: true,
         name: "List API",
         exampleList: examples
@@ -116,6 +122,8 @@ app.get('/docs/list-api', function(req, res) {
 });
 app.get('/docs/item-api', function(req, res) {
     res.render('docs/item-api', {
+        title: "Item API - Documentation - List.js",
+        descrition: "Each item in the list have  properties and methods available.",
         docs: true,
         name: "Item API",
         exampleList: examples
@@ -125,18 +133,21 @@ app.get('/docs/item-api', function(req, res) {
 
 app.get('/docs/plugins', function(req, res) {
     res.render('docs/plugins/index', {
+        title: "Plugins introduction - List.js",
         docs: true,
         exampleList: examples
     });
 });
 app.get('/docs/plugins/fuzzysearch', function(req, res) {
     res.render('docs/plugins/fuzzysearch', {
+        title: "Fuzzy search - Plugins - List.js",
         docs: true,
         exampleList: examples
     });
 });
 app.get('/docs/plugins/pagination', function(req, res) {
     res.render('docs/plugins/pagination', {
+        title: "Pagination - Plugins - List.js",
         docs: true,
         exampleList: examples
     });
@@ -144,6 +155,7 @@ app.get('/docs/plugins/pagination', function(req, res) {
 
 app.get('/docs/plugins/build', function(req, res) {
     res.render('docs/plugins/build', {
+        title: "Build your own plugin - List.js",
         docs: true,
         exampleList: examples
     });
