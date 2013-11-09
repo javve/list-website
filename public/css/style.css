@@ -1376,6 +1376,11 @@ td {
 .intro .intro-text .btn {
   margin-right: 1rem;
 }
+.misc {
+  background-color: #edf4f4;
+  border-radius: 7px;
+  padding: 3rem;
+}
 .misc h3 {
   margin: 0 0 0.5rem;
 }
@@ -1383,12 +1388,22 @@ td {
   margin-bottom: 0.5rem;
 }
 .misc .misc-carbon {
-  text-align: center;
-}
-.misc .misc-author {
-  background-color: #edf4f4;
+  float: right;
+  width: 300px;
+  height: 120px;
+  background-color: #ddeaea;
   border-radius: 7px;
-  padding: 3rem;
+  margin-left: 20px;
+}
+.misc .misc-carbon:before {
+  content: "Hidden CarbonAds :(";
+  width: 300px;
+  display: block;
+  text-align: center;
+  line-height: 120px;
+}
+.misc .misc-carbon div {
+  display: none;
 }
 .misc .misc-author img {
   float: left;
@@ -1403,13 +1418,20 @@ td {
   color: #7a7a7a;
   margin-top: 0rem;
 }
-#startpage-example {
-  -webkit-transition: opacity 0.8s ease-in-out;
-  opacity: 0.2;
+.startpage-quotes {
+  padding: 70px 0;
 }
-#startpage-example.startpage-focus {
-  opacity: 1;
-  -webkit-transition: opacity 0.8s ease-in-out;
+.startpage-quotes:before,
+.startpage-quotes:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.startpage-quotes:after {
+  clear: both;
 }
 /* * * * * * * * * * * * * * * * * * * * *
 * Examples
@@ -1538,6 +1560,9 @@ td {
   position: relative;
   top: -10px;
   right: -5px;
+}
+#jsbin-container iframe {
+  border: none !important;
 }
 /* * * * * * * * * * * * * * * * * * * * *
 * Performance

@@ -222,6 +222,9 @@ td {
 }
 
 .misc {
+    background-color:@lightGrey;
+    border-radius: 7px;
+    padding:3rem;
     h3 {
         margin:0 0 0.5rem;
     }
@@ -229,12 +232,24 @@ td {
         margin-bottom:0.5rem;
     }
     .misc-carbon {
-        text-align: center;
+        float:right;
+        width:300px;
+        height:120px;
+        background-color:darken(@lightGrey, 5%);
+        border-radius: 7px;
+        margin-left:20px;
+        &:before {
+            content:"Hidden CarbonAds :(";
+            width:300px;
+            display: block;
+            text-align: center;
+            line-height:120px;
+        }
+        div {
+            display:none;
+        }
     }
     .misc-author {
-        background-color:@lightGrey;
-        border-radius: 7px;
-        padding:3rem;
         img {
             float:left;
             margin-right:2rem;
@@ -251,15 +266,10 @@ td {
     }
 }
 
-#startpage-example {
-    -webkit-transition: opacity .8s ease-in-out;
-    opacity: 0.2;
-    &.startpage-focus {
-        opacity: 1;
-        -webkit-transition: opacity .8s ease-in-out;
-    }
+.startpage-quotes {
+    .clearfix();
+    padding:70px 0;
 }
-
 
 /* * * * * * * * * * * * * * * * * * * * *
 * Examples
@@ -380,6 +390,12 @@ td {
         position: relative;
         top:-10px;
         right:-5px;
+    }
+}
+
+#jsbin-container {
+    iframe {
+        border:none !important;
     }
 }
 

@@ -18,32 +18,34 @@
 </div>
 
 <div class="misc">
-  <div class="row">
+  <div class="misc-carbon">
+    <%- include shared/carbon.ejs %>
+  </div>
 
-    <div class="col-sm-5 misc-carbon">
-      <%- include shared/carbon.ejs %>
-    </div>
-
-    <div class="col-sm-7">
-      <div class="misc-author">
-        <img src="/images/graphics/javve.png" />
-        <h4>Hi! I'm Jonny and I've written List.js.</h4>
-        <p>I hope you like the script. I’ve put a lot of hours into it! I spend three days a week with non-profit projects like StartupLocation, List.js and.</p>
-        <p><b><a href="#">Donate a beer</a></b></p>
-        <iframe src="http://ghbtns.com/github-btn.html?user=javve&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
-        <a href="https://twitter.com/javve" class="twitter-follow-button" data-show-count="false">Follow @javve</a>
-      </div>
-    </div>
-
+  <div class="misc-author">
+    <img src="/images/graphics/javve.png" />
+    <h4>Hi! I'm Jonny and I've written List.js.</h4>
+    <p>I hope you like the script. I’ve put a lot of hours into it! I spend three days a week with non-profit projects like StartupLocation, List.js and.</p>
+    <p><b><a href="#">Donate a beer</a></b></p>
+    <iframe src="http://ghbtns.com/github-btn.html?user=javve&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+    <a href="https://twitter.com/javve" class="twitter-follow-button" data-show-count="false">Follow @javve</a>
   </div>
 </div>
+
+<div class="startpage-quotes">
+  <div class="row">
+    <div class="col-sm-4">
+      <blockquote class="twitter-tweet"><p>List.js: native JavaScript that makes your plain HTML lists super flexible, searchable, sortable and filterable - <a href="http://t.co/nOoE1RJg">http://t.co/nOoE1RJg</a></p>&mdash; Smashing Magazine (@smashingmag) <a href="https://twitter.com/smashingmag/statuses/148142949287477248">December 17, 2011</a></blockquote>
+    </div>
+    <div class="col-sm-4">
+      <blockquote class="twitter-tweet"><p>List.js: Add Search, Sort and Flexibility to HTML Lists or Tables - <a href="http://t.co/ygEp2Tk7Pu">http://t.co/ygEp2Tk7Pu</a> (“Native” JavaScript, no dependencies.)</p>&mdash; JavaScript Daily (@JavaScriptDaily) <a href="https://twitter.com/JavaScriptDaily/statuses/335832684137943040">May 18, 2013</a></blockquote>
+    </div>
+    <div class="col-sm-4">
+      <blockquote class="twitter-tweet"><p>ABSOLUTELY FUCKING BRILLIANT &gt; <a href="http://t.co/wuOiYlRe">http://t.co/wuOiYlRe</a></p>&mdash; Zeus Lalkaka (@distracteddev) <a href="https://twitter.com/distracteddev/statuses/181365908768436224">March 18, 2012</a></blockquote>
+    </div>
+  </div>
+</div>
+
 <div id="startpage-example">
 <%- include examples/annotated-example.ejs %>
 </div>
-<script>
-  var show = function() {
-    $('#startpage-example').addClass('startpage-focus');
-    $(window).off('scoll', show);
-  };
-  $(window).on('scroll', show);
-</script>

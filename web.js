@@ -61,18 +61,8 @@ app.get('/', function(req, res) {
         home: true
     });
 });
-app.get('/examples', function(req, res) {
-    res.render('examples/index', {
-        example: {
-            name: "Annotated example",
-            title: "List.js / Examples / Annotated code",
-            description: "List.js is super flexible and here are two examples of how to use it.",
-        },
-        examples: examples
-    });
-});
 app.get('/examples/:id', function(req, res) {
-    res.render('examples/pen', {
+    res.render('examples/index', {
         example: examples[req.params.id],
         examples: examples
     });
@@ -86,20 +76,26 @@ app.get('/performance', function(req, res) {
     });
 });
 
-app.get('/press', function(req, res) {
-    res.render('press', {
-        press: true
+app.get('/overview', function(req, res) {
+    res.render('overview/index', {
+        overview: true,
+        exampleList: examples
+    });
+});
+app.get('/overview/press', function(req, res) {
+    res.render('overview/press', {
+        overview: true
+    });
+});
+app.get('/overview/changelog', function(req, res) {
+    res.render('overview/changelog', {
+        overview: true,
+        exampleList: examples
     });
 });
 
 app.get('/docs', function(req, res) {
     res.render('docs/index', {
-        docs: true,
-        exampleList: examples
-    });
-});
-app.get('/docs/tldr', function(req, res) {
-    res.render('docs/tldr', {
         docs: true,
         exampleList: examples
     });
@@ -148,13 +144,6 @@ app.get('/docs/plugins/pagination', function(req, res) {
 
 app.get('/docs/plugins/build', function(req, res) {
     res.render('docs/plugins/build', {
-        docs: true,
-        exampleList: examples
-    });
-});
-
-app.get('/docs/changelog', function(req, res) {
-    res.render('docs/changelog', {
         docs: true,
         exampleList: examples
     });
