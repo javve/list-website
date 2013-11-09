@@ -146,12 +146,13 @@ h2 {
   color: #bbb;
   text-shadow: #262729 0 -1px 0;
   font-weight: 300;
-  text-align: center;
+  text-align: left;
   margin-bottom: 15px;
 }
 h2.look {
   font-size: 24px;
   margin-bottom: 45px;
+  text-align: center;
 }
 h2 strong {
   color: #fafafa;
