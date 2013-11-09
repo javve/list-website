@@ -45,7 +45,6 @@
 
 <body>
 
-  <% if (!locals.home) { %>
   <div class="menu">
     <div class="container">
       <ul class="main">
@@ -53,16 +52,10 @@
         <li><a <% if (locals.overview) { %>class="active"<% } %>href="/overview">Overview</a></li>
         <li><a <% if (locals.docs) { %>class="active"<% } %>href="/docs">Documentation</a></li>
         <li><a <% if (locals.examples) { %>class="active"<% } %>href="/examples">Examples</a></li>
+        <li><a href="https://github.com/javve/list.js">Github</a></li>
       </ul>
-      <% if (locals.plugins) { %>
-      <ul class="secondary">
-        <li><a href="/plugins/paging">Paging</a></li>
-        <li><a href="/plugins/fuzzy-search">Fuzzy Search</a></li>
-      </ul>
-      <% } %>
     </div>
   </div>
-  <% } %>
 
   <div class="container">
     <%- body %>
