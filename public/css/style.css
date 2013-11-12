@@ -1381,6 +1381,7 @@ td {
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 47px;
   padding: 1.5rem 0 0.7rem;
   background-color: #111;
   text-align: center;
@@ -1390,6 +1391,15 @@ td {
 }
 .footer a:hover {
   color: #edf4f4;
+}
+.footer .misc-share-button {
+  display: inline-block;
+}
+.footer .tweet {
+  width: 100px;
+}
+.footer .facebook {
+  width: 90px;
 }
 /* * * * * * * * * * * * * * * * * * * * *
 * Start page
