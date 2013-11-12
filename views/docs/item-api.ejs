@@ -1,7 +1,7 @@
 <%- include top.ejs %>
 <div class="row">
   <div class="col-sm-3">
-    <%- include menu.ejs %>
+    <%- include ../sub-menu.ejs %>
   </div>
   <div class="col-sm-9 docs">
 
@@ -16,11 +16,11 @@ the list.</p>
 
 <ul>
   <li>
-    <strong>elm</strong>  <em class="docs-parameter-description">Element</em><br />
+    <strong><a name="elm" href="#elm" class="anchor"></a>elm</strong>  <em class="docs-parameter-description">Element</em><br />
     The actual item DOM element
   </li>
   <li>
-    <strong>_values</strong> <em class="docs-parameter-description">Array</em><br />
+    <strong><a name="_values" href="#_values" class="anchor"></a>_values</strong> <em class="docs-parameter-description">Array</em><br />
     Direct access to the item's values. Simplifies debugging. <em><b>Note:</b> Always use item.values() when interacting with the values.</em>
   </li>
 </ul>
@@ -29,11 +29,11 @@ the list.</p>
 
 <ul>
   <li>
-    <p><strong>values(newValues)</strong></p>
+    <p><strong><a name="values" href="#values" class="anchor"></a>values(newValues)</strong></p>
     <ul>
       <li>
         <p>
-          <strong>newValues</strong> <em class="docs-parameter-description">optional</em><br />
+          <strong><a name="newValues" href="#newValues" class="anchor"></a>newValues</strong> <em class="docs-parameter-description">optional</em><br />
           If variable newValues are present the new values replaces the current item values
           and updates the list.
           If newValues are not present, the function returns the current values.
@@ -50,31 +50,32 @@ the list.</p>
   </li>
   <li>
     <p>
-      <strong>show()</strong><br>
+      <strong><a name="show" href="#show" class="anchor"></a>show()</strong><br>
       Shows the item
     </p>
   </li>
   <li>
     <p>
-      <strong>hide()</strong><br>
+      <strong><a name="hide" href="#hide" class="anchor"></a>hide()</strong><br>
       Hides the item (removes the element from the list, and then when its shown it's appended again. The element will thereby change position in the list. A bug, but a good solution is yet to be found.)
     </p>
   </li>
   <li>
     <p>
-      <strong>matching()</strong> <em class="docs-parameter-description">Boolean</em><br>
+      <strong><a name="matching" href="#matching" class="anchor"></a>matching()</strong> <em class="docs-parameter-description">Boolean</em><br>
       Returns boolean. True if the item matches the current filter and search. Visible items 
       always matches, but matching items are not always visible.
   </p>
 </li>
   <li>
     <p>
-      <strong>visisble()</strong> <em class="docs-parameter-description">Boolean</em><br>
+      <strong><a name="visisble" href="#visisble" class="anchor"></a>visisble()</strong> <em class="docs-parameter-description">Boolean</em><br>
       Returns boolean. True if the item is visible. Visible items 
     always matches, but matching items are not always visible.
     </p>
   </li>
 </ul>
 
-
-</div></div>
+    <div class="continue">Next topic: <a href="/docs/plugins">Plugins introduction ›</a></div>
+  </div>
+</div>

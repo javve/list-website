@@ -1377,6 +1377,14 @@ td {
   font-weight: 500;
   color: #2e2e2e;
 }
+.continue {
+  margin-top: 30px;
+  border-top: solid 1px #eee;
+  padding-top: 15px;
+  text-align: right;
+  font-weight: bold;
+  color: #222;
+}
 .footer {
   position: fixed;
   bottom: 0;

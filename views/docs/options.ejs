@@ -1,29 +1,29 @@
 <%- include top.ejs %>
 <div class="row">
   <div class="col-sm-3">
-    <%- include menu.ejs %>
+    <%- include ../sub-menu.ejs %>
   </div>
   <div class="col-sm-9 docs">
 
 <h2>
     <a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>
-    Parameters
+    Options
 </h2>
 <p>Using List.js is pretty much plug and play, but you can change some options if you feel like it.</p>
 <pre><code>new List(id/element, options, values);</code></pre>
 
 <ul>
 <li>
-    <strong>id</strong> or <strong>element</strong> <em class="docs-parameter-description">*required</em>
+    <strong><a name="id" href="#id" class="anchor"></a>id</strong> or <strong><a name="element" href="#element" class="anchor"></a>element</strong> <em class="docs-parameter-description">*required</em>
     Id the element in which the list area should be initialized. OR the actual element itself.
 </li>
 <li>
-<p><strong>options</strong>
+<p><strong><a name="options" href="#options" class="anchor"></a>options</strong>
 Some of the option parameters are required at some times</p>
 
 <ul>
 <li>
-<p><strong>valueNames</strong> <em class="docs-parameter-description">Array, default: null) (*only required if the list already contains items before initialization</em><br>
+<p><strong><a name="valueNames" href="#valueNames" class="anchor"></a>valueNames</strong> <em class="docs-parameter-description">Array, default: null) (*only required if the list already contains items before initialization</em><br>
 If the list contains items on initialization, then this array
 has to contain the value names (class names) for the different values of
 each list item.</p>
@@ -39,7 +39,7 @@ var valueNames = ['name', 'city'];
 </code></pre>
 </li>
 <li>
-<p><strong>item</strong> <em class="docs-parameter-description">String, default: undefined</em><br>
+<p><strong><a name="item" href="#item" class="anchor"></a>item</strong> <em class="docs-parameter-description">String, default: undefined</em><br>
 ID to item template element or a string of HTML (**notice**: does not work with <code>&lt;tr&gt;</code>)</p>
 
 <pre><code class="javascript">var options = {
@@ -51,27 +51,28 @@ var options = {
 };
 </code></pre>
 </li>
-<li><p><strong>listClass</strong> <em class="docs-parameter-description">String, default: "list"</em><br>
+<li><p><strong><a name="listClass" href="#listClass" class="anchor"></a>listClass</strong> <em class="docs-parameter-description">String, default: "list"</em><br>
 What is the class of the list-container?</p></li>
-<li><p><strong>searchClass</strong> <em class="docs-parameter-description">String, default: "search"</em><br>
+<li><p><strong><a name="searchClass" href="#searchClass" class="anchor"></a>searchClass</strong> <em class="docs-parameter-description">String, default: "search"</em><br>
 What is the class of the search field?</p></li>
-<li><p><strong>sortClass</strong> <em class="docs-parameter-description">String, default: "sort"</em><br>
+<li><p><strong><a name="sortClass" href="#sortClass" class="anchor"></a>sortClass</strong> <em class="docs-parameter-description">String, default: "sort"</em><br>
 What is the class of the sort buttons?</p></li>
-<li><p><strong>indexAsync</strong> <em class="docs-parameter-description">Boolean, default: false</em><br>
+<li><p><strong><a name="indexAsync" href="#indexAsync" class="anchor"></a>indexAsync</strong> <em class="docs-parameter-description">Boolean, default: false</em><br>
 If there are already items in the list to which the
 List.js-script is added, then should the indexing be done
 in a asynchronous way? Good for large lists (&gt; 500 items).</p></li>
-<li><p><strong>page</strong> <em class="docs-parameter-description">Int, default: 200</em><br>
+<li><p><strong><a name="page" href="#page" class="anchor"></a>page</strong> <em class="docs-parameter-description">Int, default: 200</em><br>
 Defines how many items that should be visible at the same time. This affects
 performance.</p></li>
-<li><p><strong>i</strong>  <em class="docs-parameter-description">Int, default: 1</em><br>
+<li><p><strong><a name="i" href="#i" class="anchor"></a>i</strong>  <em class="docs-parameter-description">Int, default: 1</em><br>
 Which item should be shown as the first one.</p></li>
-<li><p><strong>plugins</strong> <em class="docs-parameter-description">Array, default: undefined</em><br><a href="http://jonnystromberg.com/listjs-plugins-guide/">Read more about plugins here</a></p></li>
+<li><p><strong><a name="plugins" href="#plugins" class="anchor"></a>plugins</strong> <em class="docs-parameter-description">Array, default: undefined</em><br><a href="http://jonnystromberg.com/listjs-plugins-guide/">Read more about plugins here</a></p></li>
 </ul>
 </li>
-<li><p><strong>values</strong> <em class="docs-parameter-description">Array of objects) (*optional</em>
+<li><p><strong><a name="values" href="#values" class="anchor"></a>values</strong> <em class="docs-parameter-description">Array of objects) (*optional</em>
 Values to add to the list on initialization.</p></li>
 </ul>
 
-    </div>
+    <div class="continue">Next topic: <a href="/docs/list-api">List API ›</a></div>
+  </div>
 </div>
