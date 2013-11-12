@@ -1653,9 +1653,6 @@ td {
   top: -10px;
   right: -5px;
 }
-#jsbin-container iframe {
-  border: none !important;
-}
 /* * * * * * * * * * * * * * * * * * * * *
 * Performance
 * * * * * * * * * * * * * * * * * * * * */
