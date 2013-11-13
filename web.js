@@ -93,6 +93,13 @@ app.get('/overview/changelog', function(req, res) {
         exampleList: examples
     });
 });
+app.get('/overview/contribute', function(req, res) {
+    res.render('overview/contribute', {
+        title: "Contribute - List.js",
+        overview: true,
+        exampleList: examples
+    });
+});
 
 app.get('/docs', function(req, res) {
     res.render('docs/index', {
