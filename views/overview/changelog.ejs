@@ -17,7 +17,8 @@
         <li><b>[Improvement]</b> Add item._values for direct access to a items values. Simplifies debugging. Note: Always use item.values() when interacting with the values.</li>
         <li><b>[Bugfix]</b> <code>.add(items, callbak)</code> with <code>callback</code> set does no longer add an extra item.</li>
         <li><b>[Bugfix]</b> <code>templater.set()</code> no longer is called twice in a <code>templater.get()</code> call.</li>
-        <li><b>[Bugfix]</b> Fix error when trying to sort <code>undefined</code> values.</li>
+        <li><b>[Bugfix]</b> Fix error when trying to sort <code>undefined,null,etc</code> values.</li>
+        <li><b>[Bugfix]</b> Fix error when trying to search <code>undefined,null,etc</code> values.</li>
         <li><b>[Bugfix]</b> Fix issue #51, problems with filters/search + paging.</li>
         <li><b>[Misc]</b> Almost completely rewritten codebase and started using <a href="https://github.com/component/component">Component</a></li>
         <li><b>[Misc]</b> Moved the website into another repo called <a href="https://github.com/javve/list-website">list-website</a></li>
