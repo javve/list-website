@@ -1,7 +1,8 @@
 var express = require('express'),
     lessMiddleware = require('less-middleware'),
     partials = require('express-partials'),
-    examples = require('./examples');
+    examples = require('./examples'),
+    https = require('https');
 
 require('ejs');
 
@@ -43,7 +44,8 @@ app.configure(function(){
 app.locals({
     title: "List.js - Search, sort, filters, flexibility to tables, list and more!",
     description: "Perfect library for adding search, sort, filters and flexibility to tables, lists and various HTML elements. Built to be invisible and work on existing HTML.",
-    ogImage: "http://listjs.com/images/graphics/listjs-logo.png"
+    ogImage: "http://listjs.com/images/graphics/listjs-logo.png",
+    exampleList: examples
 });
 app.use(function(req, res, next){
     res.locals.currentUrl = req.protocol + '://' + req.host + req.url;
@@ -61,8 +63,7 @@ app.get('/', function(req, res) {
 });
 app.get('/examples/:id', function(req, res) {
     res.render('examples/index', {
-        example: examples[req.params.id],
-        examples: examples
+        example: examples[req.params.id]
     });
 });
 
@@ -77,8 +78,7 @@ app.get('/performance', function(req, res) {
 app.get('/overview', function(req, res) {
     res.render('overview/index', {
         title: "Overview - List.js",
-        overview: true,
-        exampleList: examples
+        overview: true
     });
 });
 app.get('/overview/press', function(req, res) {
@@ -89,15 +89,13 @@ app.get('/overview/press', function(req, res) {
 app.get('/overview/changelog', function(req, res) {
     res.render('overview/changelog', {
         title: "Changelog - List.js",
-        overview: true,
-        exampleList: examples
+        overview: true
     });
 });
 app.get('/overview/contribute', function(req, res) {
     res.render('overview/contribute', {
         title: "Contribute - List.js",
-        overview: true,
-        exampleList: examples
+        overview: true
     });
 });
 
@@ -105,8 +103,7 @@ app.get('/docs', function(req, res) {
     res.render('docs/index', {
         title: "Documentation - List.js",
         description: "The core thing in List.js have always been simplicity. It should require as little effort as possible to use the script and it's features.",
-        docs: true,
-        exampleList: examples
+        docs: true
     });
 });
 app.get('/docs/options', function(req, res) {
@@ -114,8 +111,7 @@ app.get('/docs/options', function(req, res) {
         title: "Options / Parameters - Documentation - List.js",
         description: "Using List.js is pretty much plug and play, but you can change some options if you feel like it.",
         docs: true,
-        name: "Options",
-        exampleList: examples
+        name: "Options"
     });
 });
 app.get('/docs/list-api', function(req, res) {
@@ -123,8 +119,7 @@ app.get('/docs/list-api', function(req, res) {
         title: "List API - Documentation - List.js",
         description: "When you've initiated the List-object you got a bunch of different properties and methods available.",
         docs: true,
-        name: "List API",
-        exampleList: examples
+        name: "List API"
     });
 });
 app.get('/docs/item-api', function(req, res) {
@@ -132,8 +127,7 @@ app.get('/docs/item-api', function(req, res) {
         title: "Item API - Documentation - List.js",
         descrition: "Each item in the list have  properties and methods available.",
         docs: true,
-        name: "Item API",
-        exampleList: examples
+        name: "Item API"
     });
 });
 
@@ -141,31 +135,58 @@ app.get('/docs/item-api', function(req, res) {
 app.get('/docs/plugins', function(req, res) {
     res.render('docs/plugins/index', {
         title: "Plugins introduction - List.js",
-        docs: true,
-        exampleList: examples
+        docs: true
     });
 });
 app.get('/docs/plugins/fuzzysearch', function(req, res) {
     res.render('docs/plugins/fuzzysearch', {
         title: "Fuzzy search - Plugins - List.js",
-        docs: true,
-        exampleList: examples
+        docs: true
     });
 });
 app.get('/docs/plugins/pagination', function(req, res) {
     res.render('docs/plugins/pagination', {
         title: "Pagination - Plugins - List.js",
-        docs: true,
-        exampleList: examples
+        docs: true
     });
 });
 
 app.get('/docs/plugins/build', function(req, res) {
     res.render('docs/plugins/build', {
         title: "Build your own plugin - List.js",
-        docs: true,
-        exampleList: examples
+        docs: true
     });
+});
+
+
+var github = function(res, host, path) {
+    var options = {
+        host: host,
+        path: path
+    }
+    var request = https.request(options, function (reqRes) {
+        var data = '';
+        reqRes.on('data', function (chunk) {
+            data += chunk;
+        });
+        reqRes.on('end', function () {
+            res.json(data);
+        });
+    });
+    request.on('error', function (e) {
+        console.log(e.message);
+    });
+    request.end();
+}
+
+app.get('/no-cdn/list.js', function(req, res) {
+    github(res, 'raw.github.com', '/javve/list.js/1.0.0/dist/list.js');
+});
+app.get('/no-cdn/list.pagination.js', function(req, res) {
+    github(res, 'raw.github.com', '/javve/list.pagination.js/v0.1.0/dist/list.pagination.js');
+});
+app.get('/no-cdn/list.fuzzysearch.js', function(req, res) {
+    github(res, 'raw.github.com', '/javve/list.fuzzysearch.js/v0.1.0/dist/list.fuzzysearch.js');
 });
 
 // 404
