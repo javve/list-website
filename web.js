@@ -170,7 +170,8 @@ var github = function(res, host, path) {
             data += chunk;
         });
         reqRes.on('end', function () {
-            res.json(data);
+            res.set('Content-Type', 'text/javascript');
+            res.send(data);
         });
     });
     request.on('error', function (e) {
