@@ -28,7 +28,7 @@
   &lt;ul class="list">
       // A bunch of items
   &lt;/ul>
-  &lt;ul class="paging">&lt;/ul>
+  &lt;ul class="pagination">&lt;/ul>
 &lt;/div>
 
 &lt;script>
@@ -36,7 +36,7 @@
     valueNames: [ 'name', 'category' ],
     page: 3,
     plugins: [
-      [ 'paging' ]
+      ListPagination({})
     ]
   };
 
@@ -49,12 +49,12 @@
     <h3>Options</h3>
     <ul>
       <li>
-        <strong>name</strong> <em class="docs-parameter-description">String, default: &ldquo;paging&rdquo;</em><br/>
+        <strong>name</strong> <em class="docs-parameter-description">String, default: &ldquo;pagination&rdquo;</em><br/>
         Default option for all plugins. Defines how to access the plugin from the list object <code>listObj.pluginName</code>.
       </li>
       <li>
-        <strong>pagingClass</strong> <em class="docs-parameter-description">String, default: &ldquo;paging&rdquo;</em><br/>
-        The class that defines which <code>ul</code> that should contain the paging (must be inside the list container)
+        <strong>paginationClass</strong> <em class="docs-parameter-description">String, default: &ldquo;pagination&rdquo;</em><br/>
+        The class that defines which <code>ul</code> that should contain the pagination (must be inside the list container)
       </li>
       <li>
         <strong>innerWindow</strong> <em class="docs-parameter-description">Int, default: 2</em><br/>
@@ -64,7 +64,7 @@
       </li>
       <li>
         <strong>outerWindow</strong> <em class="docs-parameter-description">Int, default: 0</em><br/>
-        How many pages should be visible on from the beginning and from the end of the paging.<br/>
+        How many pages should be visible on from the beginning and from the end of the pagination.<br/>
         <code>outerWindow: 0 &hellip; 3 4 <strong>5</strong> 6 7&hellip;</code><br/>
         <code>outerWindow: 2 1 2 &hellip; 4 5 <strong>6</strong> 7 8 &hellip; 11 12</code>
       </li>
@@ -111,22 +111,22 @@
     <h3>Double pagination</h3>
 
 <pre><code>&lt;div id="listId">
-  &lt;ul class="pagingTop">&lt;/ul>
+  &lt;ul class="paginationTop">&lt;/ul>
   &lt;ul class="list">
     // A bunch of items
   &lt;/ul>
-  &lt;ul class="pagingBottom">&lt;/ul>
+  &lt;ul class="paginationBottom">&lt;/ul>
 &lt;/div>
 
 &lt;script>
-  var pagingTopOptions = {
-    name: "pagingTop",
-    pagingClass: "pagingTop",
+  var paginationTopOptions = {
+    name: "paginationTop",
+    paginationClass: "paginationTop",
     outerWindow: 2
   };
-  var pagingBottomOptions = {
-    name: "pagingBottom",
-    pagingClass: "pagingBottom",
+  var paginationBottomOptions = {
+    name: "paginationBottom",
+    paginationClass: "paginationBottom",
     innerWindow: 3,
     left: 2,
     right: 4
@@ -135,8 +135,8 @@
     valueNames: [ 'name', 'category' ],
     page: 3,
     plugins: [
-        [ 'paging', pagingTopOptions],
-        [ 'paging', pagingBottomOptions]
+        [ 'pagination', paginationTopOptions],
+        [ 'pagination', paginationBottomOptions]
     ]
   };
 
