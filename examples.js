@@ -14,20 +14,19 @@ module.exports = {
     title: "Basic example: New list",
     name: "New list"
   },
-  'add-edit-remove': {
-    name: "Add, edit, remove",
-    title: "Example to showcase the add, edit and remove functionality.",
+  'add-get-remove': {
+    name: "Add, get, remove",
+    title: "Example to showcase the <a href='/docs/list-api#add'>add</a>, <a href='/docs/list-api#get'>get</a> and <a href='/docs/list-api#remove'>remove</a> functionality.",
     url: "http://jsbin.com/uLeFazU/3/embed?html,js,output"
-  },
-  table: {
-    name: "Table",
-    title: "How to create a table feature to hide and show columns",
-    url: "http://jsbin.com/ABAPaxI/2/embed?html,js,output"
   },
   'fuzzy-search': {
     name: "Fuzzy search",
-    title: "Fuzzy search example",
-    url: "http://jsbin.com/IHeCuHe/3/embed?html,output"
+    title: "Example of how to use the <a href='/docs/plugins/fuzzysearch'>fuzzy search plugin</a>",
+    url: "http://jsbin.com/IHeCuHe/5/embed?html,output"
+  },
+  'pagination': {
+    name: "Pagination",
+    title: "Example of how to use the <a href='/docs/plugins/pagination'>pagination plugin</a>",
+    url: "http://jsbin.com/ePOVIjaJ/3/embed?html,output"
   }
-
 };
