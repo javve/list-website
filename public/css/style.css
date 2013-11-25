@@ -1196,6 +1196,7 @@ html {
 }
 body {
   background-color: #fff;
+  font-size: 16px;
   font: 400 1.6rem/1.4 'helvetica neue', helvetica, arial;
   color: #a39e9a;
   padding: 80px 0 150px;
@@ -1362,13 +1363,43 @@ td {
   color: #2e2e2e;
 }
 .menu-sub {
-  margin: -1.5rem 0 3rem;
-  padding: 0;
+  margin: -4rem 0 2rem;
+  color: #ccc;
+  background-color: #edf4f4;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.menu-sub:before,
+.menu-sub:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.menu-sub:after {
+  clear: both;
+}
+.menu-sub ul {
+  padding: 15px 0 13px;
+  margin: 0;
 }
 .menu-sub li {
-  list-style-type: none;
   display: inline-block;
   margin-right: 2rem;
+}
+.menu-sub li.active a {
+  color: #222;
+}
+.example-header {
+  margin-bottom: 15px;
+}
+.example-header h1 {
+  margin-bottom: 0;
+}
+.example-header p {
+  margin-top: 10px;
 }
 .docs-menu li {
   margin-bottom: 4px;
