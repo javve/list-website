@@ -61,9 +61,16 @@ app.get('/', function(req, res) {
         home: true
     });
 });
+app.get('/examples', function(req, res) {
+    res.render('examples/index', {
+        example: examples['existing-list'],
+        examples: true
+    });
+});
 app.get('/examples/:id', function(req, res) {
     res.render('examples/index', {
-        example: examples[req.params.id]
+        example: examples[req.params.id],
+        examples: true
     });
 });
 
