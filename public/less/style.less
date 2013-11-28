@@ -335,18 +335,7 @@ td {
         background-color:darken(@lightGrey, 5%);
         border-radius: 7px;
         margin-left:20px;
-        position: relative;;
-        &:before & .loaded {
-            content:"Everytime you hide an ad... An open source developer got to go to bed instead of buy a coffee :'(";
-            width:260px;
-            display: block;
-            text-align: center;
-            left:20px;
-            top:30px;
-            position: relative;
-            font-size:1.2rem;
-            font-family: monaco, monospace;
-        }
+        position: relative;
         #carbonads-container {
             position: absolute;
             z-index: 2;
@@ -371,6 +360,17 @@ td {
             margin-bottom: 1rem;
         }
     }
+}
+.loaded .misc-carbon:before &  {
+    content:"Everytime you hide an ad... An open source developer got to go to bed instead of buy a coffee :'(";
+    width:260px;
+    display: block;
+    text-align: center;
+    left:20px;
+    top:30px;
+    position: relative;
+    font-size:1.2rem;
+    font-family: monaco, monospace;
 }
 
 .startpage-quotes {

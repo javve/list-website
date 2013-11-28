@@ -1518,17 +1518,6 @@ td {
   margin-left: 20px;
   position: relative;
 }
-.misc .misc-carbon:before .misc .misc-carbon .loaded {
-  content: "Everytime you hide an ad... An open source developer got to go to bed instead of buy a coffee :'(";
-  width: 260px;
-  display: block;
-  text-align: center;
-  left: 20px;
-  top: 30px;
-  position: relative;
-  font-size: 1.2rem;
-  font-family: monaco, monospace;
-}
 .misc .misc-carbon #carbonads-container {
   position: absolute;
   z-index: 2;
@@ -1549,6 +1538,17 @@ td {
   color: #484848;
   margin-top: 0rem;
   margin-bottom: 1rem;
+}
+.loaded .misc-carbon:before {
+  content: "Everytime you hide an ad... An open source developer got to go to bed instead of buy a coffee :'(";
+  width: 260px;
+  display: block;
+  text-align: center;
+  left: 20px;
+  top: 30px;
+  position: relative;
+  font-size: 1.2rem;
+  font-family: monaco, monospace;
 }
 .startpage-quotes {
   padding: 60px 0;
