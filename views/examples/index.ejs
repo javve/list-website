@@ -1,32 +1,7 @@
 <%- include menu.ejs %>
 
-</div>
+<p data-height="700" data-theme-id="2168" data-slug-hash="zpuKF" data-user="javve" data-default-tab="result" class='codepen'>
+  See the Pen <a href='http://codepen.io/javve/pen/zpuKF'>zpuKF</a> by Jonny Strömberg (<a href='http://codepen.io/javve'>@javve</a>) on <a href='http://codepen.io'>CodePen</a>
+</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
 
-<div id="jsbin-container">
-<a class="jsbin-embed" href="<%= example.url %>">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
-</div>
-
-<script>
-  $('body').css({
-    overflow:'hidden',
-    'padding-bottom': 0
-  });
-  function fixEmbedHeight() {
-    $('#jsbin-container').find('iframe').css("max-height", ($(window).height() - $('#jsbin-container').offset().top - 45));
-    $('#jsbin-container').find('iframe').css("min-height", ($(window).height() - $('#jsbin-container').offset().top - 45));
-    setTimeout(fixEmbedHeight, 500);
-  }
-
-  function ensureEmbedHeight() {
-    setTimeout(function() {
-      if ($('#jsbin-container').find('iframe').size() > 0) {
-        fixEmbedHeight();
-      } else {
-        ensureEmbedHeight();
-      }
-    }, 100);
-  }
-
-  $(window).load(ensureEmbedHeight);
-</script>
-<div>
