@@ -3,11 +3,11 @@
   <h2>Basic example of List.js in action</h2>
   <input class="search" placeholder="Search" />
   <button class="sort" data-sort="name">Sort by name</button>
-  <button class="sort" data-sort="name">Sort by year born</button>
+  <button class="sort" data-sort="born">Sort by year born</button>
   <div class="list">
     <div>
       <h3 class="name">Jonny Strömberg</h3>
-      <p class="born">1986</p>
+      <p class="born">1990</p>
     </div>
     <div>
       <h3 class="name">Jonas Arnklint</h3>
@@ -85,7 +85,7 @@
 <!-- Start of List.js stuff -->
 <script type="text/javascript" type="text/javascript">
     var options = {
-        valueNames: [ 'name', 'description' ]
+        valueNames: [ 'name', 'born' ]
     };
 
     var userList = new List('users', options);
