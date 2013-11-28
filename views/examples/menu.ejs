@@ -1,0 +1,21 @@
+</div>
+<div class="menu-sub">
+  <div class="container">
+    <ul>
+      <% for (var i in exampleList) { %>
+        <li<% if (exampleList[i].name == example.name) { %> class="active"<% } %>><a href="/examples/<%= i %>"><%= exampleList[i].name %></a></li>
+      <% } %>
+    </ul>
+  </div>
+</div>
+<div class="container">
+
+<div class="row example-header">
+  <div class="col-sm-7">
+    <h1><%= example.name %></h1>
+    <p><%- example.title %></h1>
+  </div>
+  <div class="col-sm-5" style="text-align:right;">
+    <%- include ../shared/carbon.ejs %>
+  </div>
+</div>

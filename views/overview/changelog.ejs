@@ -1,0 +1,85 @@
+<%- include top.ejs %>
+<div class="row">
+  <div class="col-sm-3">
+    <%- include ../sub-menu.ejs %>
+  </div>
+  <div class="col-sm-9 docs changelog">
+    <h2>Changelog</h2>
+
+    <h3>2013-11-12: 1.0.0</h3>
+    <ul>
+        <li><b>[Feature]</b> Add more events and enable to add them on initialization.</li>
+        <li><b>[Feature]</b> Add support for Component.js, Bower, RequireJS and CommonJS</li>
+        <li><b>[Feature]</b> Make it possible to remove event handlers by <code>.off('event', handler)</code></li>
+        <li><b>[Improvement]</b> Many new tests</li>
+        <li><b>[Improvement]</b> Paging plugin default classes and structure now correspons to <a href="http://twitter.github.com/bootstrap/components.html#pagination">Twitter Bootstraps pagination</a>.</li>
+        <li><b>[Improvement]</b> Make sorting case-insensitive (thanks @thomasklemm)</li>
+        <li><b>[Improvement]</b> Add item._values for direct access to a items values. Simplifies debugging. Note: Always use item.values() when interacting with the values.</li>
+        <li><b>[Bugfix]</b> <code>.add(items, callbak)</code> with <code>callback</code> set does no longer add an extra item.</li>
+        <li><b>[Bugfix]</b> <code>templater.set()</code> no longer is called twice in a <code>templater.get()</code> call.</li>
+        <li><b>[Bugfix]</b> Fix error when trying to sort <code>undefined,null,etc</code> values.</li>
+        <li><b>[Bugfix]</b> Fix error when trying to search <code>undefined,null,etc</code> values.</li>
+        <li><b>[Bugfix]</b> Fix issue #51, problems with filters/search + paging.</li>
+        <li><b>[Misc]</b> Almost completely rewritten codebase and started using <a href="https://github.com/component/component">Component</a></li>
+        <li><b>[Misc]</b> Moved the website into another repo called <a href="https://github.com/javve/list-website">list-website</a></li>
+        <li><b>[Misc]</b> Add documentation for searching in specific columns.</li>
+        <li><b>[Change]</b> <code>listObj.get('valueName', value)</code> does now always returns an array. Previously it return an object if only one item matched and null if no match was found.</li>
+        <li><b>[Change]</b> The default sort order is now <code>asc</code> instead of <code>desc</code>.</li>
+        <li><b>[Change]</b> Syntax for searching in specific columns are now <code>.search('val', [ 'columnName', 'columnName2' ])</code> instead of <code>.search('val', { columnName: true, columnName2: true })</code>.</li>
+        <li><b>[Change]</b> Move plugins into seperated repos: <a href="https://github.com/javve/list.pagination.js">github.com/javve/list.pagination.js</a> and <a href="https://github.com/javve/list.fuzzysearch.js">github.com/javve/list.fuzzysearch.js</a></li>
+        <li><b>[Change]</b> Plugin initiation have changed. See <a href="/docs/plugins">getting started with plugins</a>.
+    </ul>
+
+    <h3>2012-04-24: 0.2.1</h3>
+    <ul>
+        <li>Fuzzy Search plugin, <code>.filter()</code> changes and bug fixes </b><a href="http://jonnystromberg.com/listjs-0-2-1-release-notes/">Read more »</a></b></li>
+    </ul>
+    <h3>2012-01-23: 0.2.0</h3>
+    <ul>
+        <li>Lots of updates and interesting features. <b><a href="http://jonnystromberg.com/listjs-0-2-0-plugins-paging/">Read more »</a></b></li>
+    </ul>
+    <h3>2011-12-15: 0.1.4</h3>
+    <ul>
+        <li><code>.filters()</code>, <code>.sort()</code> and <code>.search()</code> now deped on each other. If the list is filtered and then there is a search, the items hidden by the filters will stay hidden etc.</li>
+        <li><code>.filter()</code> is the only way to reset filter. <code>.filter(false)</code> does not work anymore.</li>
+    </ul>
+    <h3>2011-11-29: 0.1.3 release</h3>
+    <ul>
+        <li>Added function <code>.clear()</code> that removes all items from the list</li>
+        <li>Changed the sort function to be based on <code>data-sort</code> instead of <code>rel</code></li>
+        <li>When sorting one category, all sort-related classes will be removed from the other sort buttons</li>
+        <li>Updated <code>.sort(valueName, sortFunction)</code> to <code>.sort(valueName, options)</code>, se more info in the documentation</li>
+    </ul>
+    <h3>2011-11-16: 0.1.2 release</h3>
+    <ul>
+        <li>Sorting is now indicated by class <code>asc</code> or <code>desc</code> at sorting buttons</li>
+        <li>Added three new small helper functions <code>hasClass(element, class)</code>, <code>addClass(element, class)</code>
+    and <code>removeClass(element, class)</code></li>
+    </ul>
+    <h3>2011-10-20: 0.1.1 release</h3>
+    <ul>
+        <li>Added possibility to reverse sort the list</li>
+    </ul>
+    <h3>2011-10-18: 0.1 release</h3>
+    <ul>
+        <li>Examples at Listjs.com works in IE7,8,9 (IE6 is not tested, should work)</li>
+        <li>More documentation</li>
+        <li>Misc bug fixes</li>
+    </ul>
+    <h3>2011-10-15 Final alpha 0.3 release</h3>
+    <ul>
+        <li>More documentation</li>
+        <li>Only show 200 items at same time, huge speed increase</li>
+        <li>Misc bug fixes</li>
+    </ul>
+    <h3>2011-08-08 Alpha 0.2 release</h3>
+    <ul>
+        <li>Added asynchronous item adding</li>
+        <li>Added asynchronous list indexing</li>
+        <li>Improved (but incomplete) documentation</li>
+        <li>Bugfixes and improved helper functions</li>
+        <li>Show helper functions non-minified</li>
+    </ul>
+    <h3>2011-07-25 Alpha 0.1 release</h3>
+  </div>
+</div>

@@ -15,17 +15,26 @@
     <meta name="google-site-verification" content="CxtqsFWhMxG32DK5A7Hbtg1ficvqhu9sybSeDP25JpI" />
 
     <link rel="shortcut icon" href="/images/graphics/favicon.ico">
+    <link rel="stylesheet" href="/js/libs/highlight/styles/xcode.css">
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- Open graph -->
     <meta property="og:title" content="<%- locals.title %>" />
-    <meta property="og:description" content="<%- locals.description || description %>" />
+    <meta property="og:description" content="<%- locals.description %>" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%- locals.currentUrl %>" />
     <meta property="og:image" content="<%- locals.ogImage %>" />
 
+    <!-- Twitter card -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="<%- locals.title %>" />
+    <meta property="twitter:site" content="@javve" />
+    <meta property="twitter:description" content="<%- locals.description %>" />
+    <meta property="twitter:image:src" content="<%- locals.ogImage %>" />
+
     <script src="/js/libs/jquery-1.8.3.min.js"></script>
-    <script src="/js/list.js"></script>
+    <script src="/no-cdn/list.js"></script>
+    <script src="/js/scripts.js"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -41,36 +50,56 @@
     </script>
 </head>
 
-<body class="clearfix">
+<body>
 
-    <div class="menu">
-        <div class="menu-container">
-            <ul class="main">
-                <li class="name"><a href="/">List.js</a></li>
-                <li><a href="/examples">Examples</a></li>
-                <li><a href="/plugins/paging">Plugins</a></li>
-                <li><a href="https://github.com/javve/list">Docs & Github</a></li>
-                <li><a href="/changelog">Changelog & Blog</a></li>
-                <li><a href="https://raw.github.com/javve/list/master/list.min.js" onClick="javascript: _gaq.push(['_trackPageview', '/download/list.min.js.menu']);"><b>Download</b></a></li>
-            </ul>
-            <% if (locals.examples) { %>
-            <ul class="secondary">
-                <li><a href="/examples">Basic example</a></li>
-                <li><a href="/examples/add-edit-remove">Add, edit & remove</a></li>
-                <li><a href="/performance">Performance</a></li>
-            </ul>
-            <% } %>
-            <% if (locals.plugins) { %>
-            <ul class="secondary">
-                <li><a href="/plugins/paging">Paging</a></li>
-                <li><a href="/plugins/fuzzy-search">Fuzzy Search</a></li>
-            </ul>
-            <% } %>
-        </div>
+  <div class="menu">
+    <div class="container">
+      <ul class="main">
+        <li><a <% if (locals.home) { %>class="active"<% } %>  href="/">Home</a></li>
+        <li><a <% if (locals.overview) { %>class="active"<% } %>href="/overview">Overview</a></li>
+        <li><a <% if (locals.docs) { %>class="active"<% } %>href="/docs">Documentation</a></li>
+        <li><a <% if (locals.examples) { %>class="active"<% } %>href="/examples">Examples</a></li>
+        <li><a href="https://github.com/javve/list.js">Github</a></li>
+      </ul>
     </div>
+  </div>
 
-    <div id="container">
-        <%- body %>
+  <div class="container">
+    <%- body %>
+  </div>
+
+  <div class="footer">
+    <div class="misc-share">
+      <iframe src="http://ghbtns.com/github-btn.html?user=javve&repo=list.js&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      <iframe src="http://ghbtns.com/github-btn.html?user=javve&repo=list.js&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+      <div class="tweet misc-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="http://listjs.com">Tweet</a></div>
+      <div class="facebook misc-share-button"><div class="fb-like" data-href="http://listjs.com" data-width="80" data-height="20" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div></div>
+      <div class="gplus misc-share-button"><div class="g-plusone" data-size="medium" data-href="http://listjs.com"></div></div>
     </div>
+  </div>
+
+  <script type="text/javascript" src="/js/libs/highlight/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=488461091214550";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Place this tag after the last +1 button tag. -->
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
 </body>
 </html>

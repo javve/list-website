@@ -1,0 +1,152 @@
+<%- include top.ejs %>
+<div class="row">
+  <div class="col-sm-3">
+    <%- include ../sub-menu.ejs %>
+  </div>
+  <div class="col-sm-9 docs">
+
+
+    <h2>Getting started</h2>
+
+    <p>The core thing in List.js have always been simplicity. It should require as little effort as possible to use the script and it's features.</p>
+
+    <h4>Via <a href="https://github.com/javve/list.js">Github</a></h4>
+    <a href="https://raw.github.com/javve/list.js/master/dist/list.min.js" class="btn btn-primary">Download List.js</a>
+
+    <h4>Via <a href="https://github.com/bower/bower">Bower</a></h4>
+    <pre><code>bower install list.js</code></pre>
+
+    <h4>Via <a href="https://github.com/component/component">Component</a></h4>
+    <pre><code>component install javve/list.js</code></pre>
+
+    <h4>Via <a href="http://cdnjs.com/">CDNJS</a></h4>
+    <pre><code>&lt;link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/List.js/1.0.0/list.min.js" /></code></pre>
+
+    <br />
+    <h2>Really simple examples</h2>
+    <p>You can use List.js on either exising HTML or </p>
+
+
+    <br /><h3>Example 1: Using existing list</h3>
+    <h5>HTML</h5>
+<pre><code>&lt;div id="hacker-list">
+  &lt;ul class="list">
+    &lt;li>
+       &lt;h3 class="name">Jonny&lt;/h3>
+       &lt;p class="city">Stockholm&lt;/p>
+    &lt;/li>
+    &lt;li>
+      &lt;h3 class="name">Jonas&lt;/h3>
+      &lt;p class="city">Berlin&lt;/p>
+    &lt;/li>
+  &lt;/ul>
+&lt;/div></code></pre>
+
+
+    <h5>Javascript</h5>
+<pre><code>var options = {
+    valueNames: [ 'name', 'city' ]
+};
+
+var hackerList = new List('hacker-list', options);</code></pre>
+
+
+    <br /><br /><h3>Example 2: Create list on initialization: Version 1 (does not work with tables)</h3>
+
+    <h5>HTML</h5>
+<pre><code>&lt;div id="hacker-list">
+    &lt;ul class="list">&lt;/ul>
+&lt;/div></code></pre>
+
+<h5>JavaScript</h5>
+<pre><code class="javascript">var options = {
+    item: '&lt;li>&lt;h3 class="name">&lt;/h3>&lt;p class="city">&lt;/p>&lt;/li>'
+};
+
+var values = [
+    { name: 'Jonny', city:'Stockholm' }
+    , { name: 'Jonas', city:'Berlin' }
+];
+
+var hackerList = new List('hacker-list', options, values);</code></pre>
+
+    <br /><br /><h3>Example 3: Create list on initialization: Version 2</h3>
+
+    <h5>HTML</h5>
+<pre><code>&lt;div id="hacker-list">
+    &lt;ul class="list">&lt;/ul>
+&lt;/div>
+
+&lt;div style="display:none;">
+    &lt;!-- A template element is needed when list is empty, TODO: needs a better solution -->
+    &lt;li id="hacker-item">
+       &lt;h3 class="name">&lt;/h3>
+       &lt;p class="city">&lt;/p>
+    &lt;/li>
+&lt;/div></code></pre>
+
+    <h5>JavaScript</h5>
+<pre><code>var options = {
+    item: 'hacker-item'
+};
+
+var values = [
+    { name: 'Jonny', city:'Stockholm' }
+    , { name: 'Jonas', city:'Berlin' }
+];
+
+var hackerList = new List('hacker-list', options, values);</code></pre>
+
+    <br /><br /><h3>Example 4: Index existing list and then add</h3>
+
+    <h5>HTML</h5>
+<pre><code>&lt;div id="hacker-list">
+    &lt;ul class="list">
+       &lt;li>
+           &lt;h3 class="name">Jonny&lt;/h3>
+           &lt;p class="city">Stockholm&lt;/p>
+       &lt;/li>
+    &lt;/ul>
+&lt;/div></code></pre>
+
+    <h5>JavaScript</h5>
+<pre><code>var options = {
+    valueNames: ['name', 'city']
+};
+
+var hackerList = new List('hacker-list', options);
+
+hackerList.add( { name: 'Jonas', city:'Berlin' } );</code></pre>
+
+    <br /><br /><h3>Example 5: Add automagic search and sort inputs and buttons</h5>
+
+    <h5>HTML</h5>
+<pre><code>&lt;div id="hacker-list">
+
+    &lt;input class="search" />
+    &lt;span class="sort" data-sort="name">Sort by name&lt;/span>
+    &lt;span class="sort" data-sort="city">Sort by city&lt;/span>
+
+    &lt;ul class="list">
+       &lt;li>
+           &lt;h3 class="name">Jonny&lt;/h3>
+           &lt;p class="city">Stockholm&lt;/p>
+       &lt;/li>
+       &lt;li>
+           &lt;h3 class="name">Jonas&lt;/h3>
+           &lt;p class="city">Berlin&lt;/p>
+       &lt;/li>
+    &lt;/ul>
+&lt;/div></code></pre>
+
+    <h5>Javascript (nothing special)</h5>
+<pre><code>var options = {
+    valueNames: [ 'name', 'city' ]
+};
+
+var hackerList = new List('hacker-list', options);</code></pre>
+
+
+    <div class="continue">Next topic: <a href="/docs/options">Options ›</a></div>
+  </div>
+</div>
