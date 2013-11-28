@@ -1565,6 +1565,18 @@ td {
 .startpage-quotes:after {
   clear: both;
 }
+.startpage-more-examples {
+  clear: both;
+  border-top: solid 1px #eee;
+}
+.startpage-more-examples ul {
+  padding: 0;
+  margin: 0;
+}
+.startpage-more-examples li {
+  display: inline-block;
+  margin-right: 15px;
+}
 /* * * * * * * * * * * * * * * * * * * * *
 * Examples
 * * * * * * * * * * * * * * * * * * * * */
