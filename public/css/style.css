@@ -1214,6 +1214,7 @@ a:hover {
   color: #1b8aba;
 }
 p {
+  font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.3;
 }
@@ -1223,12 +1224,14 @@ p b {
   font-weight: 500;
 }
 h1 {
+  font-size: 50px;
   font-size: 5rem;
   color: #f59621;
   font-weight: 400;
-  margin: 0 0 3rem;
+  margin: 0 0 30px;
 }
 h2 {
+  font-size: 30px;
   font-size: 3rem;
   color: #2e2e2e;
   font-weight: 400;
@@ -1236,18 +1239,20 @@ h2 {
 h3 {
   font-weight: 600;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   color: #2e2e2e;
 }
 h4 {
   font-weight: 600;
+  font-size: 16px;
   font-size: 1.6rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   color: #2e2e2e;
 }
 .btn {
+  font-size: 18px;
   font-size: 1.8rem;
-  padding: 0.8rem 3rem;
+  padding: 8px 30px;
   border-radius: 6px;
   border: solid 2px #28a8e0;
   display: inline-block;
@@ -1345,7 +1350,7 @@ td {
   padding: 0;
   z-index: 100;
   margin-top: -80px;
-  margin-bottom: 4rem;
+  margin-bottom: 40px;
   background-color: #28a8e0;
 }
 .menu ul {
@@ -1355,7 +1360,7 @@ td {
 }
 .menu li {
   display: inline-block;
-  margin: 0 3rem 0 0;
+  margin: 0 30px 0 0;
 }
 .menu a {
   line-height: 60px;
@@ -1372,7 +1377,7 @@ td {
   color: #2e2e2e;
 }
 .menu-sub {
-  margin: -4rem 0 2rem;
+  margin: -40px 0 20px;
   color: #ccc;
   background-color: #edf4f4;
   font-size: 14px;
@@ -1396,7 +1401,7 @@ td {
 }
 .menu-sub li {
   display: inline-block;
-  margin-right: 2rem;
+  margin-right: 20px;
 }
 .menu-sub li.active a {
   color: #222;
@@ -1430,7 +1435,7 @@ td {
   bottom: 0;
   width: 100%;
   height: 47px;
-  padding: 1.5rem 0 0.7rem;
+  padding: 15px 0 7px;
   background-color: #111;
   text-align: center;
 }
@@ -1453,8 +1458,8 @@ td {
 * Start page
 * * * * * * * * * * * * * * * * * * * * */
 .intro {
-  margin-bottom: 6rem;
-  margin-top: 2rem;
+  margin-bottom: 60px;
+  margin-top: 20px;
 }
 .intro .intro-logo {
   text-align: center;
@@ -1463,17 +1468,20 @@ td {
   max-width: 100%;
 }
 .intro .intro-text h1 {
+  font-size: 72px;
   font-size: 7.2rem;
-  margin: 0 0 0.1rem;
+  margin: 0 0 1px;
 }
 .intro .intro-text h1 small {
+  font-size: 30px;
   font-size: 3rem;
   color: #d4d1cf;
 }
 .intro .intro-text h2 {
+  font-size: 25px;
   font-size: 2.5rem;
   font-weight: 300;
-  margin: 0 0 2.5rem;
+  margin: 0 0 25px;
   color: #a39e9a;
 }
 .intro .intro-text h2 a {
@@ -1483,12 +1491,12 @@ td {
   color: #716b66;
 }
 .intro .intro-text .btn {
-  margin-right: 1rem;
+  margin-right: 10px;
 }
 .misc {
   background-color: #edf4f4;
   border-radius: 7px;
-  padding: 2rem;
+  padding: 20px;
   color: #333;
 }
 .misc:before,
@@ -1504,10 +1512,10 @@ td {
   clear: both;
 }
 .misc h3 {
-  margin: 0 0 0.5rem;
+  margin: 0 0 5px;
 }
 .misc .misc-share {
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
 }
 .misc .misc-carbon {
   float: right;
@@ -1526,18 +1534,19 @@ td {
 }
 .misc .misc-author .misc-author-pic {
   float: left;
-  margin-right: 2rem;
+  margin-right: 20px;
   border-radius: 5px;
 }
 .misc .misc-author h4 {
   margin-top: 0;
-  margin-bottom: 0.4rem;
+  margin-bottom: 4px;
 }
 .misc .misc-author p {
+  font-size: 14px;
   font-size: 1.4rem;
   color: #484848;
-  margin-top: 0rem;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 .loaded .misc-carbon:before {
   content: "Everytime you hide an ad... An open source developer got to go to bed instead of buy a coffee :'(";
@@ -1547,6 +1556,7 @@ td {
   left: 20px;
   top: 30px;
   position: relative;
+  font-size: 12px;
   font-size: 1.2rem;
   font-family: monaco, monospace;
 }
@@ -1608,7 +1618,7 @@ td {
   font-size: 11px;
 }
 #users {
-  margin-bottom: 5rem;
+  margin-bottom: 50px;
 }
 #users:before,
 #users:after {
@@ -1628,7 +1638,7 @@ td {
 #users .list > div {
   display: inline-block;
   background-color: #edf4f4;
-  padding: 1rem 0;
+  padding: 10px 0;
   width: 25%;
   text-align: center;
   box-shadow: inset 1px 0 0 #fff;
@@ -1640,8 +1650,9 @@ td {
   max-width: 100%;
 }
 #users h3 {
+  font-size: 16px;
   font-size: 1.6rem;
-  margin: 0 0 0.3rem;
+  margin: 0 0 3px;
   font-weight: normal;
 }
 #users p {
@@ -1650,14 +1661,14 @@ td {
 #users input {
   border: solid 1px #ccc;
   border-radius: 5px;
-  padding: 0.7rem 1.4rem;
+  padding: 7px 14px;
 }
 #users input:focus {
   outline: none;
   border-color: #aaa;
 }
 #users .sort {
-  padding: 0.8rem 3rem;
+  padding: 8px 30px;
   border-radius: 6px;
   border: none;
   display: inline-block;
@@ -1775,7 +1786,7 @@ td {
 .docs pre {
   background-color: #edf4f4;
   border-radius: 7px;
-  padding: 1.2rem 1.5rem;
+  padding: 12px 15px;
   margin-bottom: 5px;
 }
 .docs pre code {
@@ -1808,7 +1819,7 @@ code {
   padding: 1px 4px;
 }
 pre {
-  padding: 3rem;
+  padding: 30px;
   margin: 0;
   line-height: 1.7;
   color: #666;
@@ -1822,6 +1833,7 @@ pre code {
 pre,
 code {
   font-family: 'monaco', sans-serif;
+  font-size: 12px;
   font-size: 1.2rem;
 }
 pre code .annotation {
