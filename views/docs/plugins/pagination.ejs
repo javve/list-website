@@ -90,21 +90,15 @@
       / A bunch of items /
   &lt;/ul>
   &lt;ul class="pagination">
-     &lt;li>
-         &lt;div class="page">
-             &lt;a class="active" href="javascript:function Z(){Z=&quot;&quot;}Z()">1&lt;/a>
-           &lt;/div>
-       &lt;/li>
-     &lt;li>
-         &lt;div class="page">
-             &lt;a href="javascript:function Z(){Z=&quot;&quot;}Z()">2&lt;/a>
-           &lt;/div>
-       &lt;/li>
-     &lt;li>
-         &lt;div class="page">
-             …
-           &lt;/div>
-       &lt;/li>
+    &lt;li>
+      &lt;a class="page active" href="javascript:function Z(){Z=&quot;&quot;}Z()">1&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a class="page" href="javascript:function Z(){Z=&quot;&quot;}Z()">2&lt;/a>
+    &lt;/li>
+    &lt;li>
+      …
+    &lt;/li>
   &lt;/ul>
 &lt;/div>
 </code></pre>
@@ -136,8 +130,8 @@
     valueNames: [ 'name', 'category' ],
     page: 3,
     plugins: [
-        [ 'pagination', paginationTopOptions],
-        [ 'pagination', paginationBottomOptions]
+        ListPagination(paginationTopOptions),
+        ListPagination(paginationBottomOptions)
     ]
   };
 
