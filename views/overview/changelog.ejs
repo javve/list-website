@@ -6,9 +6,18 @@
   <div class="col-sm-9 docs changelog">
     <h2>Changelog</h2>
 
+    <h3>2014-02-03: 1.1.0</h3>
+    <ul>
+        <li><b>[Change]</b> The sorting API is update so it looks like this <code>listObj.sort('name', { order: "asc "})</code> and <code>listObj.sort('name', { order: "desc "})</code> instead or <code>listObj.sort('name', { desc: true/false })</code>.</li>
+        <li><b>[Feature]</b> Added support for default sort function <code>new List('id', { sortFunction: function(itemA, itemB) { .. }})</code>
+        <li><b>[Feature]</b> Adding <code>data-order="asc/desc"</code> to a sort button makes that button only sort <code>asc</code> or <code>desc</code>, ie no toggle.
+        <li><b>[Bugfix]</b> Fix <code>grunt watch</code> bug.</li>
+        <li><b>[Bugfix]</b> Fix sorting and search when using pagiation plugin</li>
+    </ul>
+
     <h3>2014-01-17: 1.0.2</h3>
     <ul>
-        <li>[Bugfix] Fix error that broke the lib in IE8.</li>
+        <li><b>[Bugfix]</b> Fix error that broke the lib in IE8.</li>
     </ul>
     <h3>2013-11-12: 1.0.0</h3>
     <ul>
