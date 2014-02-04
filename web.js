@@ -194,10 +194,10 @@ var github = function(res, host, path) {
 }
 
 app.get('/no-cdn/list.js', function(req, res) {
-    github(res, 'raw.github.com', '/javve/list.js/v1.0.0/dist/list.js');
+    github(res, 'raw.github.com', '/javve/list.js/v1.1.0/dist/list.js');
 });
 app.get('/no-cdn/list.pagination.js', function(req, res) {
-    github(res, 'raw.github.com', '/javve/list.pagination.js/v0.1.0/dist/list.pagination.js');
+    github(res, 'raw.github.com', '/javve/list.pagination.js/v0.1.1/dist/list.pagination.js');
 });
 app.get('/no-cdn/list.fuzzysearch.js', function(req, res) {
     github(res, 'raw.github.com', '/javve/list.fuzzysearch.js/v0.1.0/dist/list.fuzzysearch.js');
