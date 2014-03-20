@@ -108,7 +108,7 @@ listObj.add([
     { id: 1, name: "Jonny" }
     , { id: 2, name "Gustaf" }
 ];
-listObj.remove("id", 1); -> return 1</code></pre>
+listObj.remove("id", 1); // return 1</code></pre>
       </li>
       <li>
         <p><strong><a name="get" class="achor" href="#get"></a>get(valueName, value)</strong><br>
@@ -118,7 +118,7 @@ listObj.remove("id", 1); -> return 1</code></pre>
     { id: 1, name: "Jonny" }
     , { id: 2, name "Gustaf" }
 ];
-listObj.get("id", 2); -> return { id: 2, name "Gustaf" }</code></pre>
+listObj.get("id", 2); // return { id: 2, name "Gustaf" }</code></pre>
       </li>
       <li>
         <p><strong><a name="sort" class="achor" href="#sort"></a>sort(valueName, options)</strong><br>
@@ -129,8 +129,8 @@ listObj.get("id", 2); -> return { id: 2, name "Gustaf" }</code></pre>
         <code>options.order = "asc"</code> means that you want to sort the list in ascending order. Set
         <code>false</code> for descending.</p>
 
-<pre><code class="javascript">listObj.sort('name', { order: "asc" }); -> Sorts the list in abc-order based on names
-listObj.sort('name', { order: "desc" }); -> Sorts the list in zxy-order based on names</code></pre>
+<pre><code class="javascript">listObj.sort('name', { order: "asc" }); // Sorts the list in abc-order based on names
+listObj.sort('name', { order: "desc" }); // Sorts the list in zxy-order based on names</code></pre>
 
       </li>
       <li>
@@ -143,9 +143,9 @@ listObj.sort('name', { order: "desc" }); -> Sorts the list in zxy-order based on
     , { id: 3, name "Jonas" }
 ];
 
-listObj.search('Jonny'); -> Only item with name Jonny is shown (also returns this item)
+listObj.search('Jonny'); // Only item with name Jonny is shown (also returns this item)
 
-listObj.search(); -> Show all items in list</code></pre>
+listObj.search(); // Show all items in list</code></pre>
 
       </li>
       <li>
@@ -167,9 +167,9 @@ listObj.filter(function(item) {
    } else {
        return false;
    }
-}); -> Only items with id > 1 are shown in list
+}); // Only items with id > 1 are shown in list
 
-listObj.filter(); -> Remove all filters</code></pre>
+listObj.filter(); // Remove all filters</code></pre>
 
       </li>
       <li>
@@ -189,7 +189,7 @@ listObj.filter(); -> Remove all filters</code></pre>
     , { id: 6, name "Ester" }
 ];
 
-listObj.show(4, 3); -> Display item 4,5,6 </code></pre>
+listObj.show(4, 3); // Display item 4,5,6 </code></pre>
 
       </li>
       <li>
