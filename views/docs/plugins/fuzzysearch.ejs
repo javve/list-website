@@ -58,7 +58,7 @@ var fuzzyOptions = {
 var options = {
   valueNames: [ 'name', 'category' ],
   plugins: [
-    [ 'fuzzySearch', fuzzyOptions ]
+    [  ListFuzzySearch() ]
   ]
 };
 
@@ -77,7 +77,7 @@ listObj.fuzzySearch('my search', { name: true });
 
     <h3>Options</h3>
     <p>All options are optional. Simplest implementation is:</p>
-    <pre><code class="javascript">plugins: [ [ 'fuzzySearch' ] ]</code></pre>
+    <pre><code class="javascript">plugins: [ ListFuzzySearch() ]</code></pre>
     <ul>
       <li>
         <strong>location</strong> <em class="docs-parameter-description">Int, default: 0</em><br/>
