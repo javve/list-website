@@ -35,7 +35,7 @@
 ];
 
 list.search('gu thre'); // return none
-list.fuzzySearch('gu thre') // return 1 item
+list.fuzzySearch.search('gu thre') // return 1 item
 </code></pre>
 
 <h3>Implementation</h3>
@@ -65,10 +65,10 @@ var options = {
 var listObj = new List('list-id', options);
 
 // Search manually 
-listObj.fuzzySearch('my search');
+listObj.fuzzySearch.search('my search');
 
 // Search manually on specific columns
-listObj.fuzzySearch('my search', { name: true });
+listObj.fuzzySearch.search('my search', { name: true });
 
 &lt;/script>
 </code></pre>
