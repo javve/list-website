@@ -17,6 +17,12 @@ module.exports = {
     title: "Basic example: New list",
     name: "New list"
   },
+  'table': {
+    url: "http://codepen.io/javve/pen/oEezp",
+    slug: "oEezp",
+    title: "Example of how to use a table with List.js",
+    name: "Table"
+  },
   'add-get-remove': {
     name: "Add, get, remove",
     title: "Example to showcase the <a href='/docs/list-api#add'>add</a>, <a href='/docs/list-api#get'>get</a> and <a href='/docs/list-api#remove'>remove</a> functionality.",
