@@ -27,7 +27,7 @@ module.exports = {
     url: "http://codepen.io/javve/pen/GZREaN",
     slug: "GZREaN",
     title: "Use data attributes and other custom attributes as keys",
-    name: "Data attrubutes + custom"
+    name: "Data attributes + custom"
   },
   'add-get-remove': {
     name: "Add, get, remove",
