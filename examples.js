@@ -23,6 +23,12 @@ module.exports = {
     title: "Example of how to use a table with List.js",
     name: "Table"
   },
+  'data-attributes-custom-attributes': {
+    url: "http://codepen.io/javve/pen/GZREaN",
+    slug: "GZREaN",
+    title: "Use data attributes and other custom attributes as keys",
+    name: "Data attrubutes + custom"
+  },
   'add-get-remove': {
     name: "Add, get, remove",
     title: "Example to showcase the <a href='/docs/list-api#add'>add</a>, <a href='/docs/list-api#get'>get</a> and <a href='/docs/list-api#remove'>remove</a> functionality.",

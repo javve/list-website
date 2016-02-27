@@ -23,7 +23,7 @@ Some of the option parameters are required at some times</p>
 
 <ul>
 <li>
-<p><strong><a name="valueNames" href="#valueNames" class="anchor"></a>valueNames</strong> <em class="docs-parameter-description">Array, default: null) (*only required if the list already contains items before initialization</em><br>
+<p><strong><a name="valueNames" href="#valueNames" class="anchor"></a>valueNames</strong> <em class="docs-parameter-description">Array, default: null. *required</em><br>
 If the list contains items on initialization, then this array
 has to contain the value names (class names) for the different values of
 each list item.</p>
@@ -37,10 +37,28 @@ each list item.</p>
 
 var valueNames = ['name', 'city'];
 </code></pre>
+
+<pre><code>&lt;ul class="list">
+ &lt;li data-id="1">
+   &lt;a href="http://javve.com" class="link name">Jonny&lt;/a>
+   &lt;p class="born timestamp" data-timestamp="1234">1986&lt;/p>
+   &lt;img class="image" src="javve.jpg" />
+ &lt;/li>
+&lt;/ul>
+
+var valueNames =  [
+  'name',
+  'born',
+  { data: ['id'] },
+  { name: 'timestamp', attr: 'data-timestamp' },
+  { name: 'link', attr: 'href' },
+  { name: 'image', attr: 'src' }
+];</code></pre>
+
 </li>
 <li>
 <p><strong><a name="item" href="#item" class="anchor"></a>item</strong> <em class="docs-parameter-description">String, default: undefined</em><br>
-ID to item template element or a string of HTML (**notice**: does not work with <code>&lt;tr&gt;</code>)</p>
+ID to item template element or a string of HTML.</p>
 
 <pre><code class="javascript">var options = {
     item: "&lt;li&gt;&lt;span class='name'&gt;&lt;/span&gt;&lt;span class='city'&gt;&lt;/span&gt;&lt;/li&gt;"
