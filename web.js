@@ -194,7 +194,7 @@ var github = function(res, host, path) {
 }
 
 app.get('/no-cdn/list.js', function(req, res) {
-    github(res, 'raw.githubusercontent.com', '/javve/list.js/v1.1.1/dist/list.js');
+    github(res, 'raw.githubusercontent.com', '/javve/list.js/v1.2.0/dist/list.js');
 });
 app.get('/no-cdn/list.pagination.js', function(req, res) {
     github(res, 'raw.githubusercontent.com', '/javve/list.pagination.js/v0.1.1/dist/list.pagination.js');
