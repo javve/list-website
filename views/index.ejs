@@ -1,28 +1,50 @@
-<div class="intro row">
-  <div class="intro-logo col-sm-4">
+<div class="docs">
+  <%- include sub-menu.ejs %>
+  <div class="docs-content">
+
+<div class="intro">
+  <div class="intro-logo">
     <img src="/images/graphics/listjs-logo.png" />
   </div>
-  <div class="intro-text  col-sm-8">
+  <div class="intro-text">
     <h1>List.js <small>v1.2.0</small></h1>
     <h2>
       Tiny, invisible and simple, yet powerful and incredibly fast vanilla JavaScript
       that adds <em>search</em>, <em>sort</em>, <em>filters</em> and <em>flexibility</em>
       to plain HTML <em>lists</em>, <em>tables</em>, or anything.
     </h2>
-    <a href="/overview/download" class="btn btn-primary" onclick="javascript:  _gaq.push(['_trackEvent', 'Startpage', 'downlad']);">
-      Download
-    </a>
-    <a href="/overview" class="btn" onclick="javascript: _gaq.push(['_trackEvent', 'Startpage', 'overview']);">
-      Overview
-    </a>
-    <a href="/docs" class="btn" onclick="javascript: _gaq.push(['_trackEvent', 'Startpage', 'documentation']);">
-      Docs
-    </a>
-    <a href="/examples" class="btn" onclick="javascript: _gaq.push(['_trackEvent', 'Startpage', 'examples']);">
-      Examples
-    </a>
   </div>
 </div>
+
+<%- include examples/annotated-example.ejs %>
+
+<div class="startpage-more-examples">
+  <h3>More examples</h3>
+  <ul>
+    <% for (var i in exampleList) { %>
+      <li><a href="/examples/<%= i %>"><%= exampleList[i].name %></a></li>
+    <% } %>
+  </ul>
+</div>
+
+
+<div class="startpage-quotes">
+  <div class="startpage-quotes-quote">
+    <blockquote class="twitter-tweet"><p>List.js: native JavaScript that makes your plain HTML lists super flexible, searchable, sortable and filterable - <a href="http://t.co/nOoE1RJg">http://t.co/nOoE1RJg</a></p>&mdash; Smashing Magazine (@smashingmag) <a href="https://twitter.com/smashingmag/statuses/148142949287477248">December 17, 2011</a></blockquote>
+  </div>
+  <div class="startpage-quotes-quote">
+    <blockquote class="twitter-tweet" lang="en"><p>Search, sort, and filter your <a href="https://twitter.com/search?q=%23HTML&amp;src=hash">#HTML</a> tables, lists, and more with List.js <a href="http://t.co/4BHjmOEU56">http://t.co/4BHjmOEU56</a> – dev&#39;d by <a href="https://twitter.com/javve">@javve</a> log&#39;d by <a href="https://twitter.com/jerodsanto">@jerodsanto</a> <a href="https://twitter.com/search?q=%23js&amp;src=hash">#js</a></p>&mdash; The Changelog (@TheChangelog) <a href="https://twitter.com/TheChangelog/statuses/406428113510604800">November 29, 2013</a></blockquote>
+  </div>
+  <div class="startpage-quotes-quote">
+    <blockquote class="twitter-tweet"><p>List.js: Add Search, Sort and Flexibility to HTML Lists or Tables - <a href="http://t.co/ygEp2Tk7Pu">http://t.co/ygEp2Tk7Pu</a> (“Native” JavaScript, no dependencies.)</p>&mdash; JavaScript Daily (@JavaScriptDaily) <a href="https://twitter.com/JavaScriptDaily/statuses/335832684137943040">May 18, 2013</a></blockquote>
+  </div>
+</div>
+
+
+<script>
+$(window).load(function() { $('body').addClass('loaded'); });
+</script>
+
 
 <div class="misc">
   <div class="misc-carbon">
@@ -50,34 +72,5 @@
   </div>
 </div>
 
-
-<div class="startpage-quotes">
-  <div class="row">
-    <div class="col-sm-4">
-      <blockquote class="twitter-tweet"><p>List.js: native JavaScript that makes your plain HTML lists super flexible, searchable, sortable and filterable - <a href="http://t.co/nOoE1RJg">http://t.co/nOoE1RJg</a></p>&mdash; Smashing Magazine (@smashingmag) <a href="https://twitter.com/smashingmag/statuses/148142949287477248">December 17, 2011</a></blockquote>
-    </div>
-    <div class="col-sm-4">
-      <blockquote class="twitter-tweet" lang="en"><p>Search, sort, and filter your <a href="https://twitter.com/search?q=%23HTML&amp;src=hash">#HTML</a> tables, lists, and more with List.js <a href="http://t.co/4BHjmOEU56">http://t.co/4BHjmOEU56</a> – dev&#39;d by <a href="https://twitter.com/javve">@javve</a> log&#39;d by <a href="https://twitter.com/jerodsanto">@jerodsanto</a> <a href="https://twitter.com/search?q=%23js&amp;src=hash">#js</a></p>&mdash; The Changelog (@TheChangelog) <a href="https://twitter.com/TheChangelog/statuses/406428113510604800">November 29, 2013</a></blockquote>
-    </div>
-    <div class="col-sm-4">
-      <blockquote class="twitter-tweet"><p>List.js: Add Search, Sort and Flexibility to HTML Lists or Tables - <a href="http://t.co/ygEp2Tk7Pu">http://t.co/ygEp2Tk7Pu</a> (“Native” JavaScript, no dependencies.)</p>&mdash; JavaScript Daily (@JavaScriptDaily) <a href="https://twitter.com/JavaScriptDaily/statuses/335832684137943040">May 18, 2013</a></blockquote>
-    </div>
   </div>
 </div>
-
-<div id="startpage-example">
-<%- include examples/annotated-example.ejs %>
-</div>
-
-<div class="startpage-more-examples">
-  <h3>More examples</h3>
-  <ul>
-    <% for (var i in exampleList) { %>
-      <li><a href="/examples/<%= i %>"><%= exampleList[i].name %></a></li>
-    <% } %>
-  </ul>
-</div>
-
-<script>
-$(window).load(function() { $('body').addClass('loaded'); });
-</script>

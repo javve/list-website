@@ -1,9 +1,7 @@
 <%- include top.ejs %>
-<div class="row">
-  <div class="col-sm-3">
-    <%- include ../../sub-menu.ejs %>
-  </div>
-  <div class="col-sm-9 docs">
+<div class="docs">
+  <%- include ../../sub-menu.ejs %>
+  <div class="docs-content">
 
 
     <h2>Fuzzy search plugin</h2>
@@ -64,7 +62,7 @@ var options = {
 
 var listObj = new List('list-id', options);
 
-// Search manually 
+// Search manually
 listObj.fuzzySearch.search('my search');
 
 // Search manually on specific columns

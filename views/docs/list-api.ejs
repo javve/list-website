@@ -1,9 +1,7 @@
 <%- include top.ejs %>
-<div class="row">
-  <div class="col-sm-3">
-    <%- include ../sub-menu.ejs %>
-  </div>
-  <div class="col-sm-9 docs">
+<div class="docs">
+  <%- include ../sub-menu.ejs %>
+  <div class="docs-content">
 
     <h2><a name="list-api" class="anchor" href="#list-api"></a>List API</h2>
     <p>These properties and methods are available for the List-object.</p>
@@ -196,8 +194,8 @@ listObj.show(4, 3); // Display item 4,5,6 </code></pre>
       </li>
       <li>
         <p><strong><a name="update" class="achor" href="#update"></a>update()</strong><br>
-        Updates the current state of the list. Meaning that if you for instance 
-        hides some items with the <code>itemObj.hide()</code> method then you have to call <code>listObj.update()</code> 
+        Updates the current state of the list. Meaning that if you for instance
+        hides some items with the <code>itemObj.hide()</code> method then you have to call <code>listObj.update()</code>
         if you want the paging to update.</p>
       </li>
       <li>
@@ -217,4 +215,5 @@ listObj.show(4, 3); // Display item 4,5,6 </code></pre>
 </ul>
 
     <div class="continue">Next topic: <a href="/docs/item-api">Item API ›</a></div>
-</div></div>
+  </div>
+</div>

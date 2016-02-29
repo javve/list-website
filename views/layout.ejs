@@ -32,6 +32,7 @@
     <meta property="twitter:description" content="<%- locals.description %>" />
     <meta property="twitter:image:src" content="<%- locals.ogImage %>" />
 
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700' rel='stylesheet' type='text/css'>
     <script src="/js/libs/jquery-1.8.3.min.js"></script>
     <script src="/no-cdn/list.js"></script>
     <script src="/js/scripts.js"></script>
@@ -55,11 +56,8 @@
   <div class="menu">
     <div class="container">
       <ul class="main">
-        <li><a <% if (locals.home) { %>class="active"<% } %>  href="/">Home</a></li>
-        <li><a <% if (locals.overview) { %>class="active"<% } %>href="/overview">Overview</a></li>
-        <li><a <% if (locals.docs) { %>class="active"<% } %>href="/docs">Documentation</a></li>
-        <li><a <% if (locals.examples) { %>class="active"<% } %>href="/examples">Examples</a></li>
-        <li><a href="https://github.com/javve/list.js">GitHub</a></li>
+        <li style="display:none;"><a href="http://javve.com">Javve.com</a></li>
+        <li><a href="/"><b>List.js</b></a></li>
       </ul>
     </div>
   </div>

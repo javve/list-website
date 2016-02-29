@@ -1,9 +1,6 @@
-<%- include top.ejs %>
-<div class="row">
-  <div class="col-sm-3">
-    <%- include ../sub-menu.ejs %>
-  </div>
-  <div class="col-sm-9 docs">
+<div class="docs">
+  <%- include ../sub-menu.ejs %>
+  <div class="docs-content">
 
     <h2>Really simple examples</h2>
     <p>You can use List.js on either exising HTML or create new with super simple templating.</p>
@@ -11,6 +8,7 @@
 
     <h3>Example 1: Using existing list</h3>
     <h5>HTML</h5>
+
 <pre><code>&lt;div id="hacker-list">
   &lt;ul class="list">
     &lt;li>
@@ -23,7 +21,6 @@
     &lt;/li>
   &lt;/ul>
 &lt;/div></code></pre>
-
 
     <h5>JavaScript</h5>
 <pre><code>var options = {

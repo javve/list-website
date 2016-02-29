@@ -1,9 +1,7 @@
 <%- include top.ejs %>
-<div class="row">
-  <div class="col-sm-3">
-    <%- include ../sub-menu.ejs %>
-  </div>
-  <div class="col-sm-9 docs">
+<div class="docs">
+  <%- include ../sub-menu.ejs %>
+  <div class="docs-content">
 
 <h2>
 <a name="item-api" class="anchor" href="#item-api"><span class="octicon octicon-link"></span></a>Item API</h2>
@@ -63,14 +61,14 @@ the list.</p>
   <li>
     <p>
       <strong><a name="matching" href="#matching" class="anchor"></a>matching()</strong> <em class="docs-parameter-description">Boolean</em><br>
-      Returns boolean. True if the item matches the current filter and search. Visible items 
+      Returns boolean. True if the item matches the current filter and search. Visible items
       always matches, but matching items are not always visible.
   </p>
 </li>
   <li>
     <p>
       <strong><a name="visible" href="#visible" class="anchor"></a>visible()</strong> <em class="docs-parameter-description">Boolean</em><br>
-      Returns boolean. True if the item is visible. Visible items 
+      Returns boolean. True if the item is visible. Visible items
     always matches, but matching items are not always visible.
     </p>
   </li>

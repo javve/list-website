@@ -1,86 +1,67 @@
+<h2 style="display:none; max-width:none; text-align:center;">Basic example of List.js in action</h2>
+<div class="annotated-examples">
+  <div class="annotated-code">
+    <ul class="nav nav-pills" id="basic-tabs">
+      <li class="active"><a href="#existing" data-toggle="tab">Existing list</a></li>
+      <li><a href="#add" data-toggle="tab">Existing + add</a></li>
+      <li><a href="#new" data-toggle="tab">New list</a></li>
+    </ul>
+    <div class="startpage-examples tab-content">
 
-<div id="users">
-  <h2>Basic example of List.js in action</h2>
-  <input class="search" placeholder="Search" />
-  <button class="sort" data-sort="name">Sort by name</button>
-  <button class="sort" data-sort="born">Sort by year born</button>
-  <div class="list">
-    <div>
-      <h3 class="name">Jonny Strömberg</h3>
-      <p class="born">1990</p>
+      <div class="startpage-example tab-pane fade active" id="existing">
+        <div class="startpage-example-html">
+          <pre><code id="existing-html"><%- include basic/existing-html.ejs %></code></pre>
+        </div>
+        <div class="startpage-example-js">
+          <pre><code id="existing-js"><%- include basic/existing-js.ejs %></code></pre>
+        </div>
+      </div>
+
+      <div class="startpage-example tab-pane fade" id="add">
+        <div class="startpage-example-html">
+          <pre><code id="add-html"><%- include basic/add-html.ejs %></code></pre>
+        </div>
+        <div class="startpage-example-js">
+          <pre><code id="add-js"><%- include basic/add-js.ejs %></code></pre>
+        </div>
+      </div>
+
+      <div class="startpage-example tab-pane fade" id="new">
+        <div class="startpage-example-html">
+          <pre><code id="new-html"><%- include basic/new-html.ejs %></code></pre>
+        </div>
+        <div class="startpage-example-js">
+          <pre><code id="new-js" class="javascript"><%- include basic/new-js.ejs %></code></pre>
+        </div>
+      </div>
+
     </div>
-    <div>
-      <h3 class="name">Jonas Arnklint</h3>
-      <p class="born">1985</p>
-    </div>
-    <div>
-      <h3 class="name">Martina Elm</h3>
-      <p class="born">1986</p>
-    </div>
-    <div>
-      <h3 class="name">Gustaf Lindqvist</h3>
-      <p class="born">1983</p>
+  </div>
+
+  <div class="annotated-list" id="users">
+    <input class="search" placeholder="Search" />
+    <button class="sort" data-sort="name">Sort by name</button>
+    <button class="sort" data-sort="born">Sort by name</button>
+    <div class="list">
+      <div>
+        <h3 class="name">Jonny Strömberg</h3>
+        <p class="born">1990</p>
+      </div>
+      <div>
+        <h3 class="name">Jonas Arnklint</h3>
+        <p class="born">1985</p>
+      </div>
+      <div>
+        <h3 class="name">Martina Elm</h3>
+        <p class="born">1986</p>
+      </div>
+      <div>
+        <h3 class="name">Gustaf Lindqvist</h3>
+        <p class="born">1983</p>
+      </div>
     </div>
   </div>
 </div>
-
-<h3>Three ways to achieve the above example</h3>
-<ul class="nav nav-pills" id="basic-tabs">
-  <li class="active"><a href="#existing" data-toggle="tab">Existing list</a></li>
-  <li><a href="#add" data-toggle="tab">Existing + add</a></li>
-  <li><a href="#new" data-toggle="tab">New list</a></li>
-</ul>
-
-<div class="tab-content">
-
-  <div class="tab-pane fade active" id="existing">
-    <div class="row">
-      <div class="col-sm-6">
-<pre><code id="existing-html">
-<%- include basic/existing-html.ejs %>
-</code></pre>
-      </div>
-      <div class="col-sm-6">
-<pre><code id="existing-js">
-<%- include basic/existing-js.ejs %>
-</code></pre>
-      </div>
-    </div>
-  </div>
-
-  <div class="tab-pane fade" id="add">
-    <div class="row">
-      <div class="col-sm-6">
-<pre><code id="add-html">
-<%- include basic/add-html.ejs %>
-</code></pre>
-      </div>
-      <div class="col-sm-6">
-<pre><code id="add-js">
-<%- include basic/add-js.ejs %>
-</code></pre>
-      </div>
-    </div>
-  </div>
-
-  <div class="tab-pane fade" id="new">
-    <div class="row">
-      <div class="col-sm-6">
-<pre><code id="new-html">
-<%- include basic/new-html.ejs %>
-</code></pre>
-      </div>
-      <div class="col-sm-6">
-<pre><code id="new-js" class="javascript">
-<%- include basic/new-js.ejs %>
-</code></pre>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
 
 <!-- Start of List.js stuff -->
 <script type="text/javascript" type="text/javascript">
